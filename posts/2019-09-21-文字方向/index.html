@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <title>文字方向 // 不动闲心 の blog</title>
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.89.4" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="John Doe" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="https://1980204066.github.io/css/main.min.4a7ec8660f9a44b08c4da97c5f2e31b1192df1d4d0322e65c0dbbc6ecb1b863f.css" />
+
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="文字方向"/>
+<meta name="twitter:description" content="g&#43;&#43; -std=c&#43;&#43;0x test.c
+#include &lt;string&gt;#include &lt;codecvt&gt;#include &lt;locale&gt;#include &lt;iostream&gt;#include &lt;stdio.h&gt;#define WIDGTH 16 using namespace std; // utf8转unicode wstring utf8_to_wstring(const string &amp;str) { wstring_convert&lt;codecvt_utf8&lt;wchar_t&gt;&gt; utf8_cvt; return utf8_cvt.from_bytes(str); } // unicode转utf8 string wstring_to_utf8(const wstring &amp;str) { wstring_convert&lt;codecvt_utf8&lt;wchar_t&gt;&gt; utf8_cvt; return utf8_cvt.to_bytes(str); } static wstring wstart = utf8_to_wstring(u8&#34;←&#34;); static wstring LR = utf8_to_wstring(u8&#34;\n&#34;); static wstring brackets = utf8_to_wstring(&#34;〈〉《》「」『』【】〔〕（）()&#34;); int main(int argc, char **argv) { int nwords = 0; /* wcout.imbue(locale(&#34;zh_CN.GBK&#34;)); */ int has_num = 0; wstring wline = wstart; auto add_num = [&amp;](wstring&amp; wsequence) { if (has_num) { nwords &#43;= has_num, has_num = 0; wline = wsequence &#43; wline, wsequence."/>
+
+    <meta property="og:title" content="文字方向" />
+<meta property="og:description" content="g&#43;&#43; -std=c&#43;&#43;0x test.c
+#include &lt;string&gt;#include &lt;codecvt&gt;#include &lt;locale&gt;#include &lt;iostream&gt;#include &lt;stdio.h&gt;#define WIDGTH 16 using namespace std; // utf8转unicode wstring utf8_to_wstring(const string &amp;str) { wstring_convert&lt;codecvt_utf8&lt;wchar_t&gt;&gt; utf8_cvt; return utf8_cvt.from_bytes(str); } // unicode转utf8 string wstring_to_utf8(const wstring &amp;str) { wstring_convert&lt;codecvt_utf8&lt;wchar_t&gt;&gt; utf8_cvt; return utf8_cvt.to_bytes(str); } static wstring wstart = utf8_to_wstring(u8&#34;←&#34;); static wstring LR = utf8_to_wstring(u8&#34;\n&#34;); static wstring brackets = utf8_to_wstring(&#34;〈〉《》「」『』【】〔〕（）()&#34;); int main(int argc, char **argv) { int nwords = 0; /* wcout.imbue(locale(&#34;zh_CN.GBK&#34;)); */ int has_num = 0; wstring wline = wstart; auto add_num = [&amp;](wstring&amp; wsequence) { if (has_num) { nwords &#43;= has_num, has_num = 0; wline = wsequence &#43; wline, wsequence." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://1980204066.github.io/posts/2019-09-21-%E6%96%87%E5%AD%97%E6%96%B9%E5%90%91/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2019-09-21T00:00:00+00:00" />
+<meta property="article:modified_time" content="2019-09-21T00:00:00+00:00" />
+
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://1980204066.github.io"><img class="app-header-avatar" src="/avatar.jpg" alt="John Doe" /></a>
+      <h1>不动闲心 の blog</h1>
+      <nav class="app-header-menu">
+          <a class="app-header-menu-item" href="/tags/">Tags</a>
+      </nav>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vehicula turpis sit amet elit pretium.</p>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">文字方向</h1>
+      <div class="post-meta">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          Sep 21, 2019
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          2 min read
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tag">
+  <title>tag</title>
+  <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line>
+</svg>
+              <a class="tag" href="https://1980204066.github.io/tags/it/">it</a>
+        </div>
+      </div>
+    </header>
+    <div class="post-content">
+      <p>g++ -std=c++0x test.c</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C++" data-lang="C++">
+<span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;string&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;codecvt&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;locale&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;iostream&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdio.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e">#define WIDGTH 16
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">using</span> <span style="color:#66d9ef">namespace</span> std;
+
+<span style="color:#75715e">// utf8转unicode
+</span><span style="color:#75715e"></span>wstring <span style="color:#a6e22e">utf8_to_wstring</span>(<span style="color:#66d9ef">const</span> string <span style="color:#f92672">&amp;</span>str)
+{
+  wstring_convert<span style="color:#f92672">&lt;</span>codecvt_utf8<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">wchar_t</span><span style="color:#f92672">&gt;&gt;</span> utf8_cvt;
+  <span style="color:#66d9ef">return</span> utf8_cvt.from_bytes(str);
+}
+
+<span style="color:#75715e">// unicode转utf8
+</span><span style="color:#75715e"></span>string <span style="color:#a6e22e">wstring_to_utf8</span>(<span style="color:#66d9ef">const</span> wstring <span style="color:#f92672">&amp;</span>str)
+{
+  wstring_convert<span style="color:#f92672">&lt;</span>codecvt_utf8<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">wchar_t</span><span style="color:#f92672">&gt;&gt;</span> utf8_cvt;
+  <span style="color:#66d9ef">return</span> utf8_cvt.to_bytes(str);
+}
+<span style="color:#66d9ef">static</span> wstring wstart <span style="color:#f92672">=</span> utf8_to_wstring(<span style="color:#e6db74">u8</span><span style="color:#e6db74">&#34;←&#34;</span>);
+<span style="color:#66d9ef">static</span> wstring LR <span style="color:#f92672">=</span> utf8_to_wstring(<span style="color:#e6db74">u8</span><span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+<span style="color:#66d9ef">static</span> wstring brackets <span style="color:#f92672">=</span>
+utf8_to_wstring(<span style="color:#e6db74">&#34;〈〉《》「」『』【】〔〕（）()&#34;</span>);
+
+<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>(<span style="color:#66d9ef">int</span> argc, <span style="color:#66d9ef">char</span> <span style="color:#f92672">**</span>argv) 
+{
+  <span style="color:#66d9ef">int</span> nwords <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+  
+  <span style="color:#75715e">/* wcout.imbue(locale(&#34;zh_CN.GBK&#34;)); */</span>
+  <span style="color:#66d9ef">int</span> has_num <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+  wstring wline <span style="color:#f92672">=</span> wstart;
+  
+  <span style="color:#66d9ef">auto</span> add_num <span style="color:#f92672">=</span> [<span style="color:#f92672">&amp;</span>](wstring<span style="color:#f92672">&amp;</span> wsequence) 
+    {
+     <span style="color:#66d9ef">if</span> (has_num) 
+     { 
+      nwords <span style="color:#f92672">+=</span> has_num, has_num <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+      wline <span style="color:#f92672">=</span> wsequence <span style="color:#f92672">+</span> wline, wsequence.clear();
+     }
+     
+    };
+  
+  wstring wnum;
+  wstring wrev;
+  
+  <span style="color:#75715e">//string str = u8&#34;3+5 = 8&#34;;
+</span><span style="color:#75715e"></span>  string str <span style="color:#f92672">=</span> <span style="color:#e6db74">u8</span><span style="color:#e6db74">&#34;如：（3+5，6+8）的值是14；&#34;</span>;
+  cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;请输入：&#34;</span>;
+  <span style="color:#66d9ef">while</span> (cin <span style="color:#f92672">&gt;&gt;</span> str)
+  {
+    wstring w1 <span style="color:#f92672">=</span> utf8_to_wstring(str);    <span style="color:#75715e">// (w1.crbegin(),
+</span><span style="color:#75715e"></span>w1.crend());
+    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">auto</span> ch : w1)
+    {
+      
+      <span style="color:#66d9ef">auto</span> found <span style="color:#f92672">=</span> brackets.find(ch) <span style="color:#f92672">!=</span> wstring<span style="color:#f92672">::</span>npos;
+      <span style="color:#66d9ef">if</span> (found)
+        ch <span style="color:#f92672">^=</span> <span style="color:#ae81ff">1</span>;
+      
+      <span style="color:#66d9ef">if</span> (iswalnum(ch)) 
+      {
+        wnum <span style="color:#f92672">+=</span> ch, has_num <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
+        <span style="color:#75715e">//cout &lt;&lt; has_num;
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">continue</span>; 
+      }
+
+      add_num(wnum);
+    
+      wline.insert(wline.begin(), ch); <span style="color:#75715e">// reverse order
+</span><span style="color:#75715e"></span>      nwords <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>;
+      <span style="color:#66d9ef">if</span> (nwords <span style="color:#f92672">&gt;=</span> WIDGTH)
+      {
+        wrev <span style="color:#f92672">+=</span> wline <span style="color:#f92672">+</span> LR;
+        wline <span style="color:#f92672">=</span> wstart;
+        nwords <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+      }
+    
+    }
+  }
+  <span style="color:#66d9ef">if</span> (nwords <span style="color:#f92672">||</span> has_num) 
+  {
+    add_num(wnum);
+    wrev <span style="color:#f92672">+=</span> wline;
+  }
+  str <span style="color:#f92672">=</span> wstring_to_utf8(wrev);
+  cout <span style="color:#f92672">&lt;&lt;</span> str <span style="color:#f92672">&lt;&lt;</span> endl;
+  
+  <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>; 
+}
+
+</code></pre></div><p>python3 版本</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e">#!/usr/bin/python3</span>
+<span style="color:#75715e"># -*- coding: utf-8 -*-</span>
+<span style="color:#f92672">import</span> sys
+brackets <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;〈〉《》「」『』【】〔〕（）()&#34;</span>
+Widgth <span style="color:#f92672">=</span> <span style="color:#ae81ff">16</span>
+wrev <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">isAlnum</span>(word) :
+    <span style="color:#66d9ef">try</span>:
+        <span style="color:#66d9ef">return</span> word<span style="color:#f92672">.</span>encode(\<span style="color:#e6db74">&#39;utf-8</span><span style="color:#ae81ff">\&#39;</span><span style="color:#e6db74">).isalnum()</span>
+    <span style="color:#66d9ef">except</span> <span style="color:#a6e22e">UnicodeEncodeError</span>:
+        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">False</span>
+    
+<span style="color:#66d9ef">try</span>:
+    wnum <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;</span>
+    has_num <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+    wstart <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;←&#34;</span>
+    wline <span style="color:#f92672">=</span> wstart
+    nwords <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">add_num</span>(wsequence) :
+        <span style="color:#66d9ef">global</span> has_num
+        <span style="color:#66d9ef">if</span> has_num :
+            <span style="color:#66d9ef">global</span> nwords
+            nwords <span style="color:#f92672">+=</span> has_num
+            has_num <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+            <span style="color:#66d9ef">global</span> wline
+            wline <span style="color:#f92672">=</span> wsequence <span style="color:#f92672">+</span> wline
+
+    <span style="color:#66d9ef">while</span> <span style="color:#66d9ef">True</span> :
+        str <span style="color:#f92672">=</span> input(<span style="color:#e6db74">&#34;请输入：&#34;</span>)
+        <span style="color:#75715e"># print(&#34;你输入的内容是: &#34;, str, type(str))</span>
+        <span style="color:#66d9ef">for</span> word <span style="color:#f92672">in</span> str:
+            i <span style="color:#f92672">=</span> brackets<span style="color:#f92672">.</span>find(word)
+            <span style="color:#66d9ef">if</span> (i <span style="color:#f92672">!=</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>):
+                i <span style="color:#f92672">^=</span> <span style="color:#ae81ff">1</span>
+                word <span style="color:#f92672">=</span> brackets[i:i<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>]
+            <span style="color:#66d9ef">if</span> isAlnum(word):
+                wnum <span style="color:#f92672">+=</span> word
+                has_num <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
+                <span style="color:#66d9ef">continue</span>
+            add_num(wnum)
+            wnum <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;</span>
+            wline <span style="color:#f92672">=</span> word <span style="color:#f92672">+</span> wline
+            nwords <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+
+            <span style="color:#66d9ef">if</span> (nwords <span style="color:#f92672">&gt;=</span> Widgth):
+                wrev <span style="color:#f92672">=</span> wrev <span style="color:#f92672">+</span> wline <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>
+                wline <span style="color:#f92672">=</span> wstart
+                nwords <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+
+<span style="color:#66d9ef">except</span> <span style="color:#a6e22e">Exception</span> <span style="color:#66d9ef">as</span> err:
+    print(err)
+
+<span style="color:#66d9ef">if</span> nwords <span style="color:#f92672">or</span> has_num :
+    add_num(wnum)
+    wrev <span style="color:#f92672">+=</span> wline
+
+print(wrev)
+sys<span style="color:#f92672">.</span>exit(<span style="color:#ae81ff">0</span>)
+
+</code></pre></div>
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>

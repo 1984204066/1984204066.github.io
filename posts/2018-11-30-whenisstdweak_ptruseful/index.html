@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <title>Whenisstd::weak_ptruseful? // 不动闲心 の blog</title>
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.89.4" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="John Doe" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="https://1980204066.github.io/css/main.min.4a7ec8660f9a44b08c4da97c5f2e31b1192df1d4d0322e65c0dbbc6ecb1b863f.css" />
+
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Whenisstd::weak_ptruseful?"/>
+<meta name="twitter:description" content="use_countrefer: When is std::weak_ptr useful?
+weak_ptr可以判断游荡的指针是否可用。
+std::weak_ptr is a very good way to solve the dangling pointer problem. By just using raw pointers it is impossible to know if the referenced data has been deallocated or not. Instead, by letting a std::shared_ptr manage the data, and supplying std::weak_ptr to users of the data, the users can check validity of the data by calling expired() or lock().
+应用场景：
+  cache objects."/>
+
+    <meta property="og:title" content="Whenisstd::weak_ptruseful?" />
+<meta property="og:description" content="use_countrefer: When is std::weak_ptr useful?
+weak_ptr可以判断游荡的指针是否可用。
+std::weak_ptr is a very good way to solve the dangling pointer problem. By just using raw pointers it is impossible to know if the referenced data has been deallocated or not. Instead, by letting a std::shared_ptr manage the data, and supplying std::weak_ptr to users of the data, the users can check validity of the data by calling expired() or lock().
+应用场景：
+  cache objects." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://1980204066.github.io/posts/2018-11-30-whenisstdweak_ptruseful/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2018-11-30T00:00:00+00:00" />
+<meta property="article:modified_time" content="2018-11-30T00:00:00+00:00" />
+
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://1980204066.github.io"><img class="app-header-avatar" src="/avatar.jpg" alt="John Doe" /></a>
+      <h1>不动闲心 の blog</h1>
+      <nav class="app-header-menu">
+          <a class="app-header-menu-item" href="/tags/">Tags</a>
+      </nav>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vehicula turpis sit amet elit pretium.</p>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">Whenisstd::weak_ptruseful?</h1>
+      <div class="post-meta">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          Nov 30, 2018
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          2 min read
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tag">
+  <title>tag</title>
+  <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line>
+</svg>
+              <a class="tag" href="https://1980204066.github.io/tags/it/">it</a>
+        </div>
+      </div>
+    </header>
+    <div class="post-content">
+      <p>use_countrefer: <a href="https://stackoverflow.com/questions/12030650/when-is-stdweak-ptr-useful">When is std::weak_ptr
+useful?</a></p>
+<p>weak_ptr可以判断游荡的指针是否可用。</p>
+<p>std::weak_ptr is a very good way to solve the <a href="https://en.wikipedia.org/wiki/Dangling_pointer">dangling
+pointer</a> problem. By
+just using raw pointers it is impossible to know if the referenced data
+has been deallocated or not. Instead, by letting a std::shared_ptr
+manage the data, and supplying std::weak_ptr to users of the data, the
+users can check validity of the data by calling expired() or lock().</p>
+<p>应用场景：</p>
+<ul>
+<li>
+<p>cache objects. 可以用weak ptr
+保存这些objects，看看他们谁还在用，谁已经无效了。当然这种情况用shared_ptr的use_count判断为1也可以。The
+cache use case could work with a shared reference if the cache was
+able to test if the refcount is 1, thus knowing it has the only
+reference and it could release it reclaiming on demand. This would
+eliminate the need for weak references in this case.</p>
+</li>
+<li>
+<p>交叉引用问题。</p>
+</li>
+</ul>
+<p>Suppose you have Team and Member objects.</p>
+<p>Obviously it's a relationship : the Team object will have pointers to
+its Members. And it's likely that the members will also have a back
+pointer to their Team object.</p>
+<p>Then you have a dependency cycle. If you use shared_ptr, objects will no
+longer be automatically freed when you abandon reference on them,
+because they reference each other in a cyclic way. This is a memory
+leak.</p>
+<p>You break this by using weak_ptr. The &quot;owner&quot; typically use shared_ptr
+and the &quot;owned&quot; use a weak_ptr to its parent, and convert it
+temporarily to shared_ptr when it needs access to its parent.</p>
+<p>Store a weak ptr :</p>
+<p>weak_ptr&lt;Parent&gt; parentWeakPtr_ = parentSharedPtr; // automatic
+conversion to weak from shared</p>
+<p>then use it when needed</p>
+<p>shared_ptr&lt;Parent&gt; tempParentSharedPtr = parentWeakPtr_.lock(); // on
+the stack, from the weak ptr</p>
+<p>if( not tempParentSharedPtr ) {  // yes it may failed if parent was
+freed since we stored weak_ptr</p>
+<p>} else {  // do stuff</p>
+<p>}// tempParentSharedPtr is released when it goes out of scope</p>
+<ul>
+<li>管理进程std::shared_ptr&lt;Task&gt;给subtask周期分配任务，std::vector&lt;std::weak_ptr&lt;Task&gt;&gt;。用timer查看std::weak_ptr&lt;Task&gt;是否还存在。Suppose
+you have a collection of tasks, executed asynchronously, and managed
+by an std::shared_ptr&lt;Task&gt;. You may want to do something with
+those tasks periodically, so a timer event may traverse a
+std::vector&lt;std::weak_ptr&lt;Task&gt;&gt; and give the tasks something to
+do. However, simultaneously a task may have concurrently decided
+that it is no longer needed and die. The timer can thus check
+whether the task is still alive by making a shared pointer from the
+weak pointer and using that shared pointer, provided it isn't null.</li>
+</ul>
+
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>

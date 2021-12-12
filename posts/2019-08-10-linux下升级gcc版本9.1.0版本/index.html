@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <title>Linux下升级gcc版本9.1.0版本 // 不动闲心 の blog</title>
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.89.4" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="John Doe" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="https://1980204066.github.io/css/main.min.4a7ec8660f9a44b08c4da97c5f2e31b1192df1d4d0322e65c0dbbc6ecb1b863f.css" />
+
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Linux下升级gcc版本9.1.0版本"/>
+<meta name="twitter:description" content="https://mamicode.com/info-detail-2688872.html
+wget https://ftp.gnu.org/gnu/gcc/gcc-9.1.0/gcc-9.1.0.tar.gz
+tar -xzvf gcc-9.1.0.tar.gz
+cd gcc-9.1.0
+./contrib/download_prerequisiles
+mkdir ../build-gcc
+cd ../build-gcc/
+../gcc-9.1.0/configure --enable-bootstrap --enable-languages=c,c&#43;&#43; --prefix=/tools --enable-gnu-unique-object --enable-linker-build-id --with-gcc-major-version-only --with-linker-hash-style=gnu --enable-plugin --enable-initfini-array --with-isl --enable-libmpx --enable-offload-targets=nvptx-none --without-cuda-driver --enable-gnu-indirect-function --enable-cet --with-tune=generic --with-arch_32=i686 --build=x86_64-redhat-linux
+这个不行啊。
+../gcc-9.1.0/configure -enable-checking=release -prefix=/tools -enable-languages=c,c&#43;&#43; -disable-multilib
+https://blog.csdn.net/sonicling/article/details/6706152
+而GCC的词法分析是手工构造的，实现在libcpp/lex.c文件中，其中最重要的那个函数是_cpp_lex_direct，他反应了GCC词法分析器的核心结构。
+$ cat t2.c #include &lt;stdio.h&gt; int main(int argc, char **argv) { int i ← 0; unsigned char *str ← &quot;1234中&quot;; while(str[i]) { printf(&quot;%02x &quot;,str[i]); i&#43;&#43;; } printf(&quot;\n&quot;); if ( 1 ?"/>
+
+    <meta property="og:title" content="Linux下升级gcc版本9.1.0版本" />
+<meta property="og:description" content="https://mamicode.com/info-detail-2688872.html
+wget https://ftp.gnu.org/gnu/gcc/gcc-9.1.0/gcc-9.1.0.tar.gz
+tar -xzvf gcc-9.1.0.tar.gz
+cd gcc-9.1.0
+./contrib/download_prerequisiles
+mkdir ../build-gcc
+cd ../build-gcc/
+../gcc-9.1.0/configure --enable-bootstrap --enable-languages=c,c&#43;&#43; --prefix=/tools --enable-gnu-unique-object --enable-linker-build-id --with-gcc-major-version-only --with-linker-hash-style=gnu --enable-plugin --enable-initfini-array --with-isl --enable-libmpx --enable-offload-targets=nvptx-none --without-cuda-driver --enable-gnu-indirect-function --enable-cet --with-tune=generic --with-arch_32=i686 --build=x86_64-redhat-linux
+这个不行啊。
+../gcc-9.1.0/configure -enable-checking=release -prefix=/tools -enable-languages=c,c&#43;&#43; -disable-multilib
+https://blog.csdn.net/sonicling/article/details/6706152
+而GCC的词法分析是手工构造的，实现在libcpp/lex.c文件中，其中最重要的那个函数是_cpp_lex_direct，他反应了GCC词法分析器的核心结构。
+$ cat t2.c #include &lt;stdio.h&gt; int main(int argc, char **argv) { int i ← 0; unsigned char *str ← &quot;1234中&quot;; while(str[i]) { printf(&quot;%02x &quot;,str[i]); i&#43;&#43;; } printf(&quot;\n&quot;); if ( 1 ?" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://1980204066.github.io/posts/2019-08-10-linux%E4%B8%8B%E5%8D%87%E7%BA%A7gcc%E7%89%88%E6%9C%AC9.1.0%E7%89%88%E6%9C%AC/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2019-08-10T00:00:00+00:00" />
+<meta property="article:modified_time" content="2019-08-10T00:00:00+00:00" />
+
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://1980204066.github.io"><img class="app-header-avatar" src="/avatar.jpg" alt="John Doe" /></a>
+      <h1>不动闲心 の blog</h1>
+      <nav class="app-header-menu">
+          <a class="app-header-menu-item" href="/tags/">Tags</a>
+      </nav>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vehicula turpis sit amet elit pretium.</p>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">Linux下升级gcc版本9.1.0版本</h1>
+      <div class="post-meta">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          Aug 10, 2019
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          2 min read
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tag">
+  <title>tag</title>
+  <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line>
+</svg>
+              <a class="tag" href="https://1980204066.github.io/tags/it/">it</a>
+        </div>
+      </div>
+    </header>
+    <div class="post-content">
+      <p><a href="https://mamicode.com/info-detail-2688872.html">https://mamicode.com/info-detail-2688872.html</a></p>
+<p>wget <a href="https://ftp.gnu.org/gnu/gcc/gcc-9.1.0/gcc-9.1.0.tar.gz">https://ftp.gnu.org/gnu/gcc/gcc-9.1.0/gcc-9.1.0.tar.gz</a></p>
+<p>tar -xzvf gcc-9.1.0.tar.gz</p>
+<p>cd gcc-9.1.0</p>
+<p>./contrib/download_prerequisiles</p>
+<p>mkdir ../build-gcc</p>
+<p>cd ../build-gcc/</p>
+<p>../gcc-9.1.0/configure  --enable-bootstrap --enable-languages=c,c++ --prefix=/tools --enable-gnu-unique-object --enable-linker-build-id --with-gcc-major-version-only --with-linker-hash-style=gnu --enable-plugin --enable-initfini-array --with-isl --enable-libmpx --enable-offload-targets=nvptx-none --without-cuda-driver --enable-gnu-indirect-function --enable-cet --with-tune=generic --with-arch_32=i686 --build=x86_64-redhat-linux</p>
+<p>这个不行啊。</p>
+<p>../gcc-9.1.0/configure
+-enable-checking=release -prefix=/tools -enable-languages=c,c++ -disable-multilib</p>
+<p><a href="https://blog.csdn.net/sonicling/article/details/6706152">https://blog.csdn.net/sonicling/article/details/6706152</a></p>
+<p>而GCC的词法分析是手工构造的，实现在libcpp/lex.c文件中，其中最重要的那个函数是_cpp_lex_direct，他反应了GCC词法分析器的核心结构。</p>
+<p>$ cat t2.c
+ #include &lt;stdio.h&gt; 
+int main(int argc, char **argv)  
+ {  
+     int i ← 0; 
+     unsigned char *str ← &quot;1234中&quot;; 
+   
+     while(str[i]) 
+     { 
+         printf(&quot;%02x &quot;,str[i]); 
+         i++; 
+     } 
+     printf(&quot;\n&quot;); 
+     if ( 1 ?= 1) 
+         printf(&quot;%s\n&quot;, str); 
+     return 0;  
+ } 
+ $ /tools/bin/gcc t2.c
+ $ ./a.out
+31 32 33 34 e4 b8 ad  
+1234中 
+  
+ 只限于使用utf8 的 ← 
+ $ diff -u lex.c.old  lex.c
+ --- lex.c.old    2019-08-10 13:27:04.354956122 +0800 
+ +++ lex.c    2019-08-10 13:57:50.698128173 +0800 
+ @@ -3099,11 +3099,18 @@ 
+   
+      case '*': IF_NEXT_IS ('=', CPP_MULT_EQ, CPP_MULT); break; 
+      case '=': IF_NEXT_IS ('=', CPP_EQ_EQ, CPP_EQ); break; 
+ +    case 0xE2: 
+ +    if (*buffer-&gt;cur == 0x86 &amp;&amp; buffer-&gt;cur[1] == 0x90) 
+ +          buffer-&gt;cur+= 2, result-&gt;type = CPP_EQ; 
+ +        else
+ +          cpp_error (pfile, CPP_DL_WARNING, &quot;not support&quot;);      
+ +    break; 
+      case '!': IF_NEXT_IS ('=', CPP_NOT_EQ, CPP_NOT); break; 
+      case '^': IF_NEXT_IS ('=', CPP_XOR_EQ, CPP_XOR); break; 
+      case '#': IF_NEXT_IS ('#', CPP_PASTE, CPP_HASH);
+result-&gt;val.token_no = 0; break; 
+   
+ -    case '?': result-&gt;type = CPP_QUERY; break; 
+ +    //case '?': result-&gt;type = CPP_QUERY; break; 
+ +    case '?': IF_NEXT_IS ('=', CPP_EQ_EQ, CPP_QUERY); break; 
+      case '~': result-&gt;type = CPP_COMPL; break; 
+      case ',': result-&gt;type = CPP_COMMA; break; 
+      case '(': result-&gt;type = CPP_OPEN_PAREN; break; </p>
+
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>
