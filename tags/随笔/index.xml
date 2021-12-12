@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>随笔 on 不动闲心 の blog</title>
-    <link>https://1980204066.github.io.git/tags/%E9%9A%8F%E7%AC%94/</link>
+    <link>https://1980204066.github.io/tags/%E9%9A%8F%E7%AC%94/</link>
     <description>Recent content in 随笔 on 不动闲心 の blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 01 Dec 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://1980204066.github.io.git/tags/%E9%9A%8F%E7%AC%94/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 01 Dec 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://1980204066.github.io/tags/%E9%9A%8F%E7%AC%94/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Here I come</title>
-      <link>https://1980204066.github.io.git/2021/12/01/comming/</link>
+      <link>https://1980204066.github.io/2021/12/01/comming/</link>
       <pubDate>Wed, 01 Dec 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://1980204066.github.io.git/2021/12/01/comming/</guid>
+      <guid>https://1980204066.github.io/2021/12/01/comming/</guid>
       <description>I&amp;rsquo;m coming 写博客还是要用gitbub之类.
 github, gitee强调了版本管理，所有的文章都有本地备份。
 其他的都是说封就封，连导出文件都不允许，都是霸王条款，说理都没地方说.
@@ -24,10 +24,10 @@ SADHU,SADHU,SADHU</description>
     
     <item>
       <title>深刻理解Reactor和Proactor</title>
-      <link>https://1980204066.github.io.git/2020/12/30/%E6%B7%B1%E5%88%BB%E7%90%86%E8%A7%A3Reactor%E5%92%8CProactor/</link>
+      <link>https://1980204066.github.io/2020/12/30/%E6%B7%B1%E5%88%BB%E7%90%86%E8%A7%A3Reactor%E5%92%8CProactor/</link>
       <pubDate>Wed, 30 Dec 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://1980204066.github.io.git/2020/12/30/%E6%B7%B1%E5%88%BB%E7%90%86%E8%A7%A3Reactor%E5%92%8CProactor/</guid>
+      <guid>https://1980204066.github.io/2020/12/30/%E6%B7%B1%E5%88%BB%E7%90%86%E8%A7%A3Reactor%E5%92%8CProactor/</guid>
       <description>反应器Reactor
   主动器Proactor
   https://www.cnblogs.com/me115/p/4452801.html
@@ -37,10 +37,10 @@ Proactor就是老板吩咐干活模式。</description>
     
     <item>
       <title>99天通关轻BT地图次元门</title>
-      <link>https://1980204066.github.io.git/2018/03/11/99%E5%A4%A9%E9%80%9A%E5%85%B3%E8%BD%BBBT%E5%9C%B0%E5%9B%BE%E6%AC%A1%E5%85%83%E9%97%A8/</link>
+      <link>https://1980204066.github.io/2018/03/11/99%E5%A4%A9%E9%80%9A%E5%85%B3%E8%BD%BBBT%E5%9C%B0%E5%9B%BE%E6%AC%A1%E5%85%83%E9%97%A8/</link>
       <pubDate>Sun, 11 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://1980204066.github.io.git/2018/03/11/99%E5%A4%A9%E9%80%9A%E5%85%B3%E8%BD%BBBT%E5%9C%B0%E5%9B%BE%E6%AC%A1%E5%85%83%E9%97%A8/</guid>
+      <guid>https://1980204066.github.io/2018/03/11/99%E5%A4%A9%E9%80%9A%E5%85%B3%E8%BD%BBBT%E5%9C%B0%E5%9B%BE%E6%AC%A1%E5%85%83%E9%97%A8/</guid>
       <description>https://tieba.baidu.com/p/4022852262?pn=11
 访问蓝色帐篷触发事件，是要先灭巨龙之后？或者天数限制。98天触发剧情，建起斗士碑！https://tieba.baidu.com/p/4022852262?pn=12
 打仙女龙用抗魔，土系魔法书里的，没用过。我用1条黑龙+力盾+末日魔法慢慢耗，用了1000多魔法值。
@@ -53,10 +53,10 @@ Proactor就是老板吩咐干活模式。</description>
     
     <item>
       <title>Lophis</title>
-      <link>https://1980204066.github.io.git/2016/03/11/lophis/</link>
+      <link>https://1980204066.github.io/2016/03/11/lophis/</link>
       <pubDate>Fri, 11 Mar 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://1980204066.github.io.git/2016/03/11/lophis/</guid>
+      <guid>https://1980204066.github.io/2016/03/11/lophis/</guid>
       <description>http://www.ucbug.com/sygl/133539.html
 \
 前言
@@ -105,10 +105,10 @@ Proactor就是老板吩咐干活模式。</description>
     
     <item>
       <title>太阳能控制器</title>
-      <link>https://1980204066.github.io.git/2016/03/11/sun-energy/</link>
+      <link>https://1980204066.github.io/2016/03/11/sun-energy/</link>
       <pubDate>Fri, 11 Mar 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://1980204066.github.io.git/2016/03/11/sun-energy/</guid>
+      <guid>https://1980204066.github.io/2016/03/11/sun-energy/</guid>
       <description>太阳能控制器50A60A 离网光伏发电控制器 48V50A60A光伏发电站 --480  https://item.taobao.com/item.htm?spm=2013.1.20141002.4.19bb5f99eEYRMs&amp;amp;scm=1007.10009.70205.100200300000001&amp;amp;id=542103260420&amp;amp;pvid=f22d72d4-67fc-4dc1-9498-bd55c39d5159
   全新足瓦200W单晶光伏板组件太阳能发电板可充12V\24V蓄电池 -- 445
 https://item.taobao.com/item.htm?id=563298867032&amp;amp;ali_refid=a3_430673_1006:1110023626:N:%E5%8D%95%E6%99%B6%E5%A4%AA%E9%98%B3%E8%83%BD%E6%9D%BF:0c79591f7bd3630acc0fac1ef0232b7d&amp;amp;ali_trackid=1_0c79591f7bd3630acc0fac1ef0232b7d&amp;amp;spm=a2e15.8261149.07626516002.7

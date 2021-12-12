@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>it on 不动闲心 の blog</title>
-    <link>https://1980204066.github.io.git/tags/it/</link>
+    <link>https://1980204066.github.io/tags/it/</link>
     <description>Recent content in it on 不动闲心 の blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 04 Dec 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://1980204066.github.io.git/tags/it/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 04 Dec 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://1980204066.github.io/tags/it/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>编译kernel</title>
-      <link>https://1980204066.github.io.git/2019/12/04/%E7%BC%96%E8%AF%91kernel/</link>
+      <link>https://1980204066.github.io/2019/12/04/%E7%BC%96%E8%AF%91kernel/</link>
       <pubDate>Wed, 04 Dec 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://1980204066.github.io.git/2019/12/04/%E7%BC%96%E8%AF%91kernel/</guid>
+      <guid>https://1980204066.github.io/2019/12/04/%E7%BC%96%E8%AF%91kernel/</guid>
       <description>How to compile and install Linux Kernel 5.1.2 from source code
 下载 linux-5.4.1
 cp /boot/config-5.3.13-300.fc31.x86_64 linux-5.4.1/.config
@@ -29,20 +29,20 @@ htags-server # 默认https://127.0.0.1:8000</description>
     
     <item>
       <title>备份邮箱的脚本</title>
-      <link>https://1980204066.github.io.git/2019/09/25/%E5%A4%87%E4%BB%BD%E9%82%AE%E7%AE%B1%E7%9A%84%E8%84%9A%E6%9C%AC/</link>
+      <link>https://1980204066.github.io/2019/09/25/%E5%A4%87%E4%BB%BD%E9%82%AE%E7%AE%B1%E7%9A%84%E8%84%9A%E6%9C%AC/</link>
       <pubDate>Wed, 25 Sep 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://1980204066.github.io.git/2019/09/25/%E5%A4%87%E4%BB%BD%E9%82%AE%E7%AE%B1%E7%9A%84%E8%84%9A%E6%9C%AC/</guid>
+      <guid>https://1980204066.github.io/2019/09/25/%E5%A4%87%E4%BB%BD%E9%82%AE%E7%AE%B1%E7%9A%84%E8%84%9A%E6%9C%AC/</guid>
       <description>https://www.newsmth.net/nForum/#!article/Python/152831
 # -*- coding: utf-8 -*- import os import requests from lxml import html headers = { &amp;#39;Host&amp;#39;: &amp;#39;m.newsmth.net&amp;#39;, &amp;#39;Accept-Language&amp;#39;: &amp;#39;zh-CN,zh;q=0.8,en;q=0.6&amp;#39;, &amp;#39;Connection&amp;#39;: &amp;#39;keep-alive&amp;#39;, &amp;#39;Pragma&amp;#39;: &amp;#39;no-cache&amp;#39;, &amp;#39;Cache-Control&amp;#39;: &amp;#39;no-cache&amp;#39;, &amp;#39;Upgrade-Insecure-Requests&amp;#39;: &amp;#39;1&amp;#39;, &amp;#39;Accept&amp;#39;: &amp;#39;text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8&amp;#39;, &amp;#39;User-Agent&amp;#39;: &amp;#39;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_4) &amp;#39; &amp;#39;AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Safari/537.36&amp;#39;, &amp;#39;Cookie&amp;#39;: &amp;#39;你的cookei&amp;#39; } def save(text, filename=&amp;#39;temp&amp;#39;, path=&amp;#39;outbox&amp;#39;): fpath = os.path.join(path, filename) with open(fpath, &amp;#39;wb&amp;#39;) as f: print(&amp;#39;output:&amp;#39;, fpath) f.write(text) def save_letter(letter_url): resp = requests.get(&amp;#39;https://m.newsmth.net&amp;#39;+letter_url,headers=headers) page = resp.</description>
     </item>
     
     <item>
       <title>python3的lxml</title>
-      <link>https://1980204066.github.io.git/2019/09/24/python3%E7%9A%84lxml/</link>
+      <link>https://1980204066.github.io/2019/09/24/python3%E7%9A%84lxml/</link>
       <pubDate>Tue, 24 Sep 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://1980204066.github.io.git/2019/09/24/python3%E7%9A%84lxml/</guid>
+      <guid>https://1980204066.github.io/2019/09/24/python3%E7%9A%84lxml/</guid>
       <description>lxml 学习笔记
 如果某个属性的值有多个时，我们可以使用contains()函数来获取
 result1=html.xpath(&#39;//li[contains(@class,&amp;quot;aaa&amp;quot;)]/a/text()&#39;)
@@ -56,10 +56,10 @@ xml[0].tail.find(&amp;quot;italic&amp;quot;)</description>
     
     <item>
       <title>GitHub网页githubusercontent地址访问</title>
-      <link>https://1980204066.github.io.git/2019/09/22/githubusercontent/</link>
+      <link>https://1980204066.github.io/2019/09/22/githubusercontent/</link>
       <pubDate>Sun, 22 Sep 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://1980204066.github.io.git/2019/09/22/githubusercontent/</guid>
+      <guid>https://1980204066.github.io/2019/09/22/githubusercontent/</guid>
       <description>ref: https://zhuanlan.zhihu.com/p/107691233
 hosts文件内容如下：
 # 2020年12月30日更新 # GitHub Start 52.74.223.119 github.com 52.74.223.119 gist.github.com 54.169.195.247 api.github.com 185.199.111.153 assets-cdn .github.com 199.232.96.133 raw.githubusercontent.com 199.232.96.133 gist.githubusercontent.com 199.232.96.133 cloud.githubusercontent.com 199.232.96.133 camo.githubusercontent.com 199.232.96.133 avatars0.githubusercontent.com 199.232.96.133 avatars1.githubusercontent.com 199.232.96.133 avatars2.githubusercontent.com 199.232.96.133 avatars3.githubusercontent.com 199.232.96.133 avatars4.githubusercontent.com 199.232.96.133 avatars5.githubusercontent.com 199.232.96.133 avatars6.githubusercontent.com 199.232.96.133 avatars7.githubusercontent.com 199.232.96.133 avatars8.githubusercontent.com 199.232.96.133 user-images.githubusercontent.com 185.199.109.154 github.githubassets.com # GitHub End 然后 sudo systemctl restart NetworkManager.service 不用可能也可以。
@@ -68,29 +68,29 @@ ping raw.githubusercontent.com</description>
     
     <item>
       <title>文字方向</title>
-      <link>https://1980204066.github.io.git/2019/09/21/%E6%96%87%E5%AD%97%E6%96%B9%E5%90%91/</link>
+      <link>https://1980204066.github.io/2019/09/21/%E6%96%87%E5%AD%97%E6%96%B9%E5%90%91/</link>
       <pubDate>Sat, 21 Sep 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://1980204066.github.io.git/2019/09/21/%E6%96%87%E5%AD%97%E6%96%B9%E5%90%91/</guid>
+      <guid>https://1980204066.github.io/2019/09/21/%E6%96%87%E5%AD%97%E6%96%B9%E5%90%91/</guid>
       <description>g++ -std=c++0x test.c
 #include &amp;lt;string&amp;gt;#include &amp;lt;codecvt&amp;gt;#include &amp;lt;locale&amp;gt;#include &amp;lt;iostream&amp;gt;#include &amp;lt;stdio.h&amp;gt;#define WIDGTH 16 using namespace std; // utf8转unicode wstring utf8_to_wstring(const string &amp;amp;str) { wstring_convert&amp;lt;codecvt_utf8&amp;lt;wchar_t&amp;gt;&amp;gt; utf8_cvt; return utf8_cvt.from_bytes(str); } // unicode转utf8 string wstring_to_utf8(const wstring &amp;amp;str) { wstring_convert&amp;lt;codecvt_utf8&amp;lt;wchar_t&amp;gt;&amp;gt; utf8_cvt; return utf8_cvt.to_bytes(str); } static wstring wstart = utf8_to_wstring(u8&amp;#34;←&amp;#34;); static wstring LR = utf8_to_wstring(u8&amp;#34;\n&amp;#34;); static wstring brackets = utf8_to_wstring(&amp;#34;〈〉《》「」『』【】〔〕（）()&amp;#34;); int main(int argc, char **argv) { int nwords = 0; /* wcout.imbue(locale(&amp;#34;zh_CN.GBK&amp;#34;)); */ int has_num = 0; wstring wline = wstart; auto add_num = [&amp;amp;](wstring&amp;amp; wsequence) { if (has_num) { nwords += has_num, has_num = 0; wline = wsequence + wline, wsequence.</description>
     </item>
     
     <item>
       <title>is_base_of</title>
-      <link>https://1980204066.github.io.git/2019/08/23/is_base_of/</link>
+      <link>https://1980204066.github.io/2019/08/23/is_base_of/</link>
       <pubDate>Fri, 23 Aug 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://1980204066.github.io.git/2019/08/23/is_base_of/</guid>
+      <guid>https://1980204066.github.io/2019/08/23/is_base_of/</guid>
       <description>明白了就看看这个 is_base_of namespace details { template &amp;lt;typename Base&amp;gt; std::true_type is_base_of_test_func(const volatile Base*); template &amp;lt;typename Base&amp;gt; std::false_type is_base_of_test_func(const volatile void*); template &amp;lt;typename Base, typename Derived&amp;gt; using pre_is_base_of = decltype(is_base_of_test_func&amp;lt;Base&amp;gt;(std::declval&amp;lt;Derived*&amp;gt;())); // with &amp;lt;experimental/type_traits&amp;gt;: // template &amp;lt;typename Base, typename Derived&amp;gt; // using pre_is_base_of2 = std::experimental::detected_or_t&amp;lt;std::true_type, pre_is_base_of, Base, Derived&amp;gt;; template &amp;lt;typename Base, typename Derived, typename = void&amp;gt; struct pre_is_base_of2 : public std::true_type { }; // note std::void_t is a C++17 feature template &amp;lt;typename Base, typename Derived&amp;gt; struct pre_is_base_of2&amp;lt;Base, Derived, std::void_t&amp;lt;pre_is_base_of&amp;lt;Base, Derived&amp;gt;&amp;gt;&amp;gt; : public pre_is_base_of&amp;lt;Base, Derived&amp;gt; { }; } template &amp;lt;typename Base, typename Derived&amp;gt; struct is_base_of : public std::conditional_t&amp;lt; std::is_class&amp;lt;Base&amp;gt;::value &amp;amp;&amp;amp; std::is_class&amp;lt;Derived&amp;gt;::value, details::pre_is_base_of2&amp;lt;Base, Derived&amp;gt;, std::false_type &amp;gt; { }; https://stackoverflow.</description>
     </item>
     
     <item>
       <title>use-package专题</title>
-      <link>https://1980204066.github.io.git/2019/08/17/use-package%E4%B8%93%E9%A2%98/</link>
+      <link>https://1980204066.github.io/2019/08/17/use-package%E4%B8%93%E9%A2%98/</link>
       <pubDate>Sat, 17 Aug 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://1980204066.github.io.git/2019/08/17/use-package%E4%B8%93%E9%A2%98/</guid>
+      <guid>https://1980204066.github.io/2019/08/17/use-package%E4%B8%93%E9%A2%98/</guid>
       <description>Table of Contents  package的引入和管理 Eval after load use-package manual 暴增 Emacs 生产力的十大最佳插件 emacs操作 - 插件篇 超简单emacs配置 emacs配置 How to exclude files from Projectile?  package的引入和管理 Auto-loading 可以向emacs中注册一个函数，只有当调用或者使用这个函数的时候，包含这个函数的文件才会加载。这么用：
 (autoload&amp;rsquo;some-function”some-file”)
 当调用some-function 时，加载some-file.el，再执行这个函数。autoload完整参数：
@@ -106,10 +106,10 @@ Eval after load 当我们加载一个package的时候想配置它，比如绑定
     
     <item>
       <title>elisp基础与示例</title>
-      <link>https://1980204066.github.io.git/2019/08/13/elisp%E5%9F%BA%E7%A1%80%E4%B8%8E%E7%A4%BA%E4%BE%8B/</link>
+      <link>https://1980204066.github.io/2019/08/13/elisp%E5%9F%BA%E7%A1%80%E4%B8%8E%E7%A4%BA%E4%BE%8B/</link>
       <pubDate>Tue, 13 Aug 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://1980204066.github.io.git/2019/08/13/elisp%E5%9F%BA%E7%A1%80%E4%B8%8E%E7%A4%BA%E4%BE%8B/</guid>
+      <guid>https://1980204066.github.io/2019/08/13/elisp%E5%9F%BA%E7%A1%80%E4%B8%8E%E7%A4%BA%E4%BE%8B/</guid>
       <description>Table of Contents  lisp基础知识  lisp求值 elisp函数中的quote lisp谓词eq,eql,equal   lisp构想例  读取url让firefox打开 去掉list重复项目 删除list中的一项 求全组合    lisp基础知识 lisp求值 求值是 lisp 解释器的核心，理解了求值过程也就学会了 lisp 编程的一半。一个symbol可以同时指代变量和函数，就是说一个foo，即是变量，又是 函数，在lisp里面是合法的。
 (defun foo (x) (* x x)) (setq foo 5) (foo foo)  一个要求值的 lisp对象被称为表达式（form）。所有的表达式可以分为三种： 符号、列表和其它类型（废话）。
   自求值表达式。前面说过数字、字符串、向量都是自求值表达式。还有两个特殊的符号
@@ -121,10 +121,10 @@ t 和 nil
     
     <item>
       <title>emacs-配置帮助</title>
-      <link>https://1980204066.github.io.git/2019/08/11/emacs-%E9%85%8D%E7%BD%AE%E5%B8%AE%E5%8A%A9/</link>
+      <link>https://1980204066.github.io/2019/08/11/emacs-%E9%85%8D%E7%BD%AE%E5%B8%AE%E5%8A%A9/</link>
       <pubDate>Sun, 11 Aug 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://1980204066.github.io.git/2019/08/11/emacs-%E9%85%8D%E7%BD%AE%E5%B8%AE%E5%8A%A9/</guid>
+      <guid>https://1980204066.github.io/2019/08/11/emacs-%E9%85%8D%E7%BD%AE%E5%B8%AE%E5%8A%A9/</guid>
       <description>Table of Contents  Key Bind Commands global-set-key 干了什么 绑定中文命令 Custom Prefixes Emacs中`global-set-key`和`define-key global-map`有什么区别 使用add-hook给指定的主模式绑定按键 使用define-key给指定的模式绑定按键 M-x global-set-key RET 交互式的绑定你的键 Duplicating prefix keys 如何把find-file绑定到M-o emacs使用ggtags my dot emacs Emacs M$ 系统下特别慢  Key Bind Commands There are several ways you can define (or undefine) keys, as the table below shows, but in reality there are dozens of ways you can hack the keymaps.
 (define-key KEYMAP KEY DEF)
 Defines a key against a keyboard map.</description>
@@ -132,10 +132,10 @@ Defines a key against a keyboard map.</description>
     
     <item>
       <title>gnome-termilalfont</title>
-      <link>https://1980204066.github.io.git/2019/08/10/gnome-termilalfont/</link>
+      <link>https://1980204066.github.io/2019/08/10/gnome-termilalfont/</link>
       <pubDate>Sat, 10 Aug 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://1980204066.github.io.git/2019/08/10/gnome-termilalfont/</guid>
+      <guid>https://1980204066.github.io/2019/08/10/gnome-termilalfont/</guid>
       <description>cp /mnt/d/Windows/Fonts/simsun.ttf ~/.fonts
 fc-cache
 sudo fc-cache -fv .fonts (.fonts为你的字体目)
@@ -147,10 +147,10 @@ screenshot
     
     <item>
       <title>Linux下升级gcc版本9.1.0版本</title>
-      <link>https://1980204066.github.io.git/2019/08/10/Linux%E4%B8%8B%E5%8D%87%E7%BA%A7gcc%E7%89%88%E6%9C%AC9.1.0%E7%89%88%E6%9C%AC/</link>
+      <link>https://1980204066.github.io/2019/08/10/Linux%E4%B8%8B%E5%8D%87%E7%BA%A7gcc%E7%89%88%E6%9C%AC9.1.0%E7%89%88%E6%9C%AC/</link>
       <pubDate>Sat, 10 Aug 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://1980204066.github.io.git/2019/08/10/Linux%E4%B8%8B%E5%8D%87%E7%BA%A7gcc%E7%89%88%E6%9C%AC9.1.0%E7%89%88%E6%9C%AC/</guid>
+      <guid>https://1980204066.github.io/2019/08/10/Linux%E4%B8%8B%E5%8D%87%E7%BA%A7gcc%E7%89%88%E6%9C%AC9.1.0%E7%89%88%E6%9C%AC/</guid>
       <description>https://mamicode.com/info-detail-2688872.html
 wget https://ftp.gnu.org/gnu/gcc/gcc-9.1.0/gcc-9.1.0.tar.gz
 tar -xzvf gcc-9.1.0.tar.gz
@@ -168,10 +168,10 @@ $ cat t2.c #include &amp;lt;stdio.h&amp;gt; int main(int argc, char **argv) {�
     
     <item>
       <title>2019 07 24 Cache一致性和内存模型</title>
-      <link>https://1980204066.github.io.git/posts/2019-07-24-cache%E4%B8%80%E8%87%B4%E6%80%A7%E5%92%8C%E5%86%85%E5%AD%98%E6%A8%A1%E5%9E%8B/</link>
+      <link>https://1980204066.github.io/posts/2019-07-24-cache%E4%B8%80%E8%87%B4%E6%80%A7%E5%92%8C%E5%86%85%E5%AD%98%E6%A8%A1%E5%9E%8B/</link>
       <pubDate>Wed, 24 Jul 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://1980204066.github.io.git/posts/2019-07-24-cache%E4%B8%80%E8%87%B4%E6%80%A7%E5%92%8C%E5%86%85%E5%AD%98%E6%A8%A1%E5%9E%8B/</guid>
+      <guid>https://1980204066.github.io/posts/2019-07-24-cache%E4%B8%80%E8%87%B4%E6%80%A7%E5%92%8C%E5%86%85%E5%AD%98%E6%A8%A1%E5%9E%8B/</guid>
       <description>Cache一致性和内存模型   https://wudaijun.com/2019/04/cpu-cache-and-memory-model/
  本文主要谈谈CPU Cache的设计，内存屏障的原理和用法，最后简单聊聊内存一致性。
  我们都知道存储器是分层级的，从CPU寄存器到硬盘，越靠近CPU的存储器越小越快，离CPU越远的存储器越大但越慢，即所谓存储器层级(Memory Hierarchy)。以下是计算机内各种存储器的容量和访问速度的典型值。
@@ -189,10 +189,10 @@ Cache Geometry   当CPU加载某个地址上的数据时，会从Cache中查找�
     
     <item>
       <title>自动mountntfs</title>
-      <link>https://1980204066.github.io.git/2018/12/16/%E8%87%AA%E5%8A%A8mountntfs/</link>
+      <link>https://1980204066.github.io/2018/12/16/%E8%87%AA%E5%8A%A8mountntfs/</link>
       <pubDate>Sun, 16 Dec 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://1980204066.github.io.git/2018/12/16/%E8%87%AA%E5%8A%A8mountntfs/</guid>
+      <guid>https://1980204066.github.io/2018/12/16/%E8%87%AA%E5%8A%A8mountntfs/</guid>
       <description>/etc/fstab
 UUID=&amp;quot;60CA0B46CA0B17C4&amp;quot; /mnt/lenovo ntfs defaults,noauto,user,exec 0 0
 ntfs-3g 需要一些设置： https://www.tuxera.com/community/ntfs-3g-faq/#useroption
@@ -206,20 +206,20 @@ Unprivileged block device mounts work only if all the below requirements are met
     
     <item>
       <title>Firefox浏览器插件</title>
-      <link>https://1980204066.github.io.git/posts/2018-12-09-firefox%E6%B5%8F%E8%A7%88%E5%99%A8%E6%8F%92%E4%BB%B6/</link>
+      <link>https://1980204066.github.io/posts/2018-12-09-firefox%E6%B5%8F%E8%A7%88%E5%99%A8%E6%8F%92%E4%BB%B6/</link>
       <pubDate>Sun, 09 Dec 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://1980204066.github.io.git/posts/2018-12-09-firefox%E6%B5%8F%E8%A7%88%E5%99%A8%E6%8F%92%E4%BB%B6/</guid>
+      <guid>https://1980204066.github.io/posts/2018-12-09-firefox%E6%B5%8F%E8%A7%88%E5%99%A8%E6%8F%92%E4%BB%B6/</guid>
       <description>Tampermonkey   http://www.cnplugins.com/zhuanti/tampermonkey-userscript-recommend.html
    Tampermonkey自用脚本推荐百度网盘直接下载助手 https://greasyfork.org/zh-CN/scripts/23635       解决百度云大文件下载限制 https://greasyfork.org/zh-CN/scripts/17800       优化百度-搜狗-谷歌搜索结果之重定向去除-去广告 https://greasyfork.org/zh-CN/scripts/14178       Tampermonkey自用脚本推荐百度网盘直接下载助手 https://greasyfork.org/zh-CN/scripts/23635       解决百度云大文件下载限制 https://greasyfork.org/zh-CN/scripts/17800       优化百度-搜狗-谷歌搜索结果之重定向去除-去广告 https://greasyfork.org/zh-CN/scripts/14178       知乎免登陆 https://greasyfork.org/zh-CN/scripts/6489       vip视频在线解析 https://greasyfork.org/zh-CN/scripts/27349       网页强制复制 https://greasyfork.</description>
     </item>
     
     <item>
       <title>IDM下载器</title>
-      <link>https://1980204066.github.io.git/2018/12/08/IDM%E4%B8%8B%E8%BD%BD%E5%99%A8/</link>
+      <link>https://1980204066.github.io/2018/12/08/IDM%E4%B8%8B%E8%BD%BD%E5%99%A8/</link>
       <pubDate>Sat, 08 Dec 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://1980204066.github.io.git/2018/12/08/IDM%E4%B8%8B%E8%BD%BD%E5%99%A8/</guid>
+      <guid>https://1980204066.github.io/2018/12/08/IDM%E4%B8%8B%E8%BD%BD%E5%99%A8/</guid>
       <description>IDM下载器使用方法详解 https://chromecj.com/utilities/2018-11/1666.html 通过IDM下载百度云的资源 https://blog.csdn.net/dajitui2024/article/details/79396662 Tampermonkey Chrome插件下载 估计可以在这找到: https://www.cnplugins.com/office/tampermonkey/download.html
 百度网盘直接下载助手 直链加速版 https://greasyfork.org/zh-CN/scripts/39504-%E7%99%BE%E5%BA%A6%E7%BD%91%E7%9B%98%E7%9B%B4%E6%8E%A5%E4%B8%8B%E8%BD%BD%E5%8A%A9%E6%89%8B-%E7%9B%B4%E9%93%BE%E5%8A%A0%E9%80%9F%E7%89%88
 2018-11-13 : v1.3.3 修复脚本失效的问题, 请登录后使用
@@ -233,10 +233,10 @@ IDM+百度网盘助手 https://blog.csdn.net/sinat_31428707/article/details/809
     
     <item>
       <title>网盘</title>
-      <link>https://1980204066.github.io.git/2018/12/06/%E7%BD%91%E7%9B%98/</link>
+      <link>https://1980204066.github.io/2018/12/06/%E7%BD%91%E7%9B%98/</link>
       <pubDate>Thu, 06 Dec 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://1980204066.github.io.git/2018/12/06/%E7%BD%91%E7%9B%98/</guid>
+      <guid>https://1980204066.github.io/2018/12/06/%E7%BD%91%E7%9B%98/</guid>
       <description>百度云上还有一个空间,用手机号登陆 https://yun.baidu.com/ 包括一些winpe
 pan.baidu.com 有2个,用 gmail帐号登陆. 手机号一个空的.
 2016.12.20.FBA完整版.7z:
@@ -248,10 +248,10 @@ https://pan.baidu.com/s/1RytqHy-_IEaBtHHT-pIb8g密码:tdsq</description>
     
     <item>
       <title>linux安装Steam</title>
-      <link>https://1980204066.github.io.git/2018/12/05/linux%E5%AE%89%E8%A3%85Steam/</link>
+      <link>https://1980204066.github.io/2018/12/05/linux%E5%AE%89%E8%A3%85Steam/</link>
       <pubDate>Wed, 05 Dec 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://1980204066.github.io.git/2018/12/05/linux%E5%AE%89%E8%A3%85Steam/</guid>
+      <guid>https://1980204066.github.io/2018/12/05/linux%E5%AE%89%E8%A3%85Steam/</guid>
       <description>https://negativo17.org/steam/
  dnf config-manager --add-repo=https://negativo17.org/repos/fedora-steam.repo
  To make &amp;ldquo;Big Picture&amp;rdquo; work in Fedora or CentOS/RHEL, enable this SELinux boolean as root:
@@ -267,10 +267,10 @@ cmake --build . -- -j2</description>
     
     <item>
       <title>smbclient</title>
-      <link>https://1980204066.github.io.git/2018/12/05/smbclient/</link>
+      <link>https://1980204066.github.io/2018/12/05/smbclient/</link>
       <pubDate>Wed, 05 Dec 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://1980204066.github.io.git/2018/12/05/smbclient/</guid>
+      <guid>https://1980204066.github.io/2018/12/05/smbclient/</guid>
       <description>win7下先share目录ISO
 Linux：
 smbclient -L 192.168.1.101
@@ -283,20 +283,20 @@ smb: \&amp;gt; q
     
     <item>
       <title>cpp真有点吓人</title>
-      <link>https://1980204066.github.io.git/2018/11/30/cpp%E7%9C%9F%E6%9C%89%E7%82%B9%E5%90%93%E4%BA%BA/</link>
+      <link>https://1980204066.github.io/2018/11/30/cpp%E7%9C%9F%E6%9C%89%E7%82%B9%E5%90%93%E4%BA%BA/</link>
       <pubDate>Fri, 30 Nov 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://1980204066.github.io.git/2018/11/30/cpp%E7%9C%9F%E6%9C%89%E7%82%B9%E5%90%93%E4%BA%BA/</guid>
+      <guid>https://1980204066.github.io/2018/11/30/cpp%E7%9C%9F%E6%9C%89%E7%82%B9%E5%90%93%E4%BA%BA/</guid>
       <description>https://www.newsmth.net/nForum/#!article/CPlusPlus/403674
 下面的英文是从教程里摘出来的。然后有点没看懂：make_unique 是cpp14引入的， 在这之前，下面叙述里的 foo 函数要怎么写才可以避免意外的内存泄露呢？ ------------------------------------------------------------- If your compiler does not yet support make_unique() , you can create your unique_ptr as follows. Note that Simple must be mentioned twice: unique_ptr&amp;lt;Simple&amp;gt; mySimpleSmartPtr(new Simple()); Before C++17, you had to use make_unique() not only because you have to specify the type only once, but also because of safety reasons! Consider the following call to a function called foo() : foo(unique_ptr&amp;lt;Simple&amp;gt;(new Simple()), unique_ptr&amp;lt;Bar&amp;gt;(new Bar(data()))); If the constructor of Simple or Bar , or the data() function, throws an exception, depending on your compiler optimizations, it was very possible that either a Simple or a Bar object would be leaked.</description>
     </item>
     
     <item>
       <title>Whenisstd::weak_ptruseful?</title>
-      <link>https://1980204066.github.io.git/2018/11/30/Whenisstd::weak_ptruseful?/</link>
+      <link>https://1980204066.github.io/2018/11/30/Whenisstd::weak_ptruseful?/</link>
       <pubDate>Fri, 30 Nov 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://1980204066.github.io.git/2018/11/30/Whenisstd::weak_ptruseful?/</guid>
+      <guid>https://1980204066.github.io/2018/11/30/Whenisstd::weak_ptruseful?/</guid>
       <description>use_countrefer: When is std::weak_ptr useful?
 weak_ptr可以判断游荡的指针是否可用。
 std::weak_ptr is a very good way to solve the dangling pointer problem. By just using raw pointers it is impossible to know if the referenced data has been deallocated or not. Instead, by letting a std::shared_ptr manage the data, and supplying std::weak_ptr to users of the data, the users can check validity of the data by calling expired() or lock().
@@ -306,10 +306,10 @@ std::weak_ptr is a very good way to solve the dangling pointer problem. By just 
     
     <item>
       <title>ld链接器脚本内的locationcounter</title>
-      <link>https://1980204066.github.io.git/2018/04/09/ld%E9%93%BE%E6%8E%A5%E5%99%A8%E8%84%9A%E6%9C%AC%E5%86%85%E7%9A%84locationcounter/</link>
+      <link>https://1980204066.github.io/2018/04/09/ld%E9%93%BE%E6%8E%A5%E5%99%A8%E8%84%9A%E6%9C%AC%E5%86%85%E7%9A%84locationcounter/</link>
       <pubDate>Mon, 09 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://1980204066.github.io.git/2018/04/09/ld%E9%93%BE%E6%8E%A5%E5%99%A8%E8%84%9A%E6%9C%AC%E5%86%85%E7%9A%84locationcounter/</guid>
+      <guid>https://1980204066.github.io/2018/04/09/ld%E9%93%BE%E6%8E%A5%E5%99%A8%E8%84%9A%E6%9C%AC%E5%86%85%E7%9A%84locationcounter/</guid>
       <description>https://www.newsmth.net/nForum/#!article/KernelTech/74604
 . 是指 memory layout，表示当前偏移量。
 对于reloadeble， 。 代表了相邻的session和当前位置的偏移。0-offset
@@ -319,10 +319,10 @@ https://forum.osdev.org/viewtopic.php?f=1&amp;amp;t=32840
     
     <item>
       <title>Bios Gpt Pxe Bcdboot Winpe Linux引导</title>
-      <link>https://1980204066.github.io.git/posts/2017-08-23-bios-gpt-pxe-bcdboot-winpe-linux%E5%BC%95%E5%AF%BC/</link>
+      <link>https://1980204066.github.io/posts/2017-08-23-bios-gpt-pxe-bcdboot-winpe-linux%E5%BC%95%E5%AF%BC/</link>
       <pubDate>Wed, 23 Aug 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://1980204066.github.io.git/posts/2017-08-23-bios-gpt-pxe-bcdboot-winpe-linux%E5%BC%95%E5%AF%BC/</guid>
+      <guid>https://1980204066.github.io/posts/2017-08-23-bios-gpt-pxe-bcdboot-winpe-linux%E5%BC%95%E5%AF%BC/</guid>
       <description>bios + gpt 折腾   一点注意：
  grub2-install /dev/sda
  把core.img写入Boot Partition.不是sda1.
@@ -334,10 +334,10 @@ BIOS系统：   1、GRUB（2）：需要2MiB”BIOS启动分区”（requires a 
     
     <item>
       <title>蹭网猫</title>
-      <link>https://1980204066.github.io.git/2017/08/22/%E8%B9%AD%E7%BD%91%E7%8C%AB/</link>
+      <link>https://1980204066.github.io/2017/08/22/%E8%B9%AD%E7%BD%91%E7%8C%AB/</link>
       <pubDate>Tue, 22 Aug 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://1980204066.github.io.git/2017/08/22/%E8%B9%AD%E7%BD%91%E7%8C%AB/</guid>
+      <guid>https://1980204066.github.io/2017/08/22/%E8%B9%AD%E7%BD%91%E7%8C%AB/</guid>
       <description>B8000：
 echo &amp;#34;start set usb-ether...&amp;#34; setprop sys.usb.config rndis sleep 1 ifconfig rndis0 10.9.8.1 netmask 255.255.255.0 up sleep 1 echo 1 &amp;gt; /proc/sys/net/ipv4/ip_forward sleep 1 iptables -P FORWARD ACCEPT iptables -A FORWARD -i usb0 -o wlan0 -j ACCEPT iptables -t nat -A POSTROUTING -o wlan0 -j MASQUERADE echo &amp;#34;finish setting&amp;#34; HTC:
 echo &amp;#34;start set usb-ether...&amp;#34; echo 1 &amp;gt; /sys/class/android_usb/f_rndis/on sleep 1 ifconfig usb0 10.9.9.1 netmask 255.255.255.0 up sleep 1 echo 1 &amp;gt; /proc/sys/net/ipv4/ip_forward sleep 1 iptables -P FORWARD ACCEPT iptables -A FORWARD -i usb0 -o wlan0 -j ACCEPT iptables -t nat -A POSTROUTING -o wlan0 -j MASQUERADE echo &amp;#34;finish setting&amp;#34; cwm.</description>
@@ -345,10 +345,10 @@ echo &amp;#34;start set usb-ether...&amp;#34; echo 1 &amp;gt; /sys/class/androi
     
     <item>
       <title>mobaxterm is good</title>
-      <link>https://1980204066.github.io.git/2016/03/09/moba/</link>
+      <link>https://1980204066.github.io/2016/03/09/moba/</link>
       <pubDate>Wed, 09 Mar 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://1980204066.github.io.git/2016/03/09/moba/</guid>
+      <guid>https://1980204066.github.io/2016/03/09/moba/</guid>
       <description>https://www.52pojie.cn/thread-815661-1-1.html
 
 MobaXterm 是一款Windows系统下全功能终端软件，11月1日官方正式版发布了 v11.0 Build 3816 版本
@@ -380,10 +380,10 @@ MobaXterm Keygen 使用说明：
     
     <item>
       <title>cygwin64-安装包管理工具</title>
-      <link>https://1980204066.github.io.git/2016/03/08/cywin64/</link>
+      <link>https://1980204066.github.io/2016/03/08/cywin64/</link>
       <pubDate>Tue, 08 Mar 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://1980204066.github.io.git/2016/03/08/cywin64/</guid>
+      <guid>https://1980204066.github.io/2016/03/08/cywin64/</guid>
       <description>Win10安装cygwin并添加apt-cyg\
 cygwin64-安装包管理工具 https://www.aliyun.com/jiaocheng/871909.html
 .dos command, install pkg\
@@ -410,10 +410,10 @@ apt-cyg update --mirror https://mirrors.</description>
     
     <item>
       <title>几款神器软件</title>
-      <link>https://1980204066.github.io.git/2016/03/07/software/</link>
+      <link>https://1980204066.github.io/2016/03/07/software/</link>
       <pubDate>Mon, 07 Mar 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://1980204066.github.io.git/2016/03/07/software/</guid>
+      <guid>https://1980204066.github.io/2016/03/07/software/</guid>
       <description>http://www.newsmth.net/nForum/#!article/NewSoftware/225130?p=1
 应该很多人都用过，并且从中受过益，没有别的意思，只想抛抛砖引引玉。 1、下载神器IDM
 可以说只要你能在网页上看到的，都可以下载。新闻视频、直播数据，等等，还可以无限速下载百度云的文件，好用得很。 \
@@ -444,10 +444,10 @@ win10 pro 激活码 \
     
     <item>
       <title>Apk Dump 刷机</title>
-      <link>https://1980204066.github.io.git/posts/2016-03-05-apk-dump-%E5%88%B7%E6%9C%BA/</link>
+      <link>https://1980204066.github.io/posts/2016-03-05-apk-dump-%E5%88%B7%E6%9C%BA/</link>
       <pubDate>Sat, 05 Mar 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://1980204066.github.io.git/posts/2016-03-05-apk-dump-%E5%88%B7%E6%9C%BA/</guid>
+      <guid>https://1980204066.github.io/posts/2016-03-05-apk-dump-%E5%88%B7%E6%9C%BA/</guid>
       <description>dump apk   首先得配好java环境， https://www.cnblogs.com/guxiaobei/p/8556586.html
 apt-get install default-jre apt-get install default-jdk #去Oracle官方网站下载并安装JDK https://www.oracle.com/technetwork/java/javase/downloads # JDK必须是1.7版本 [[https://www.52pojie.cn/thread-844248-1-1.html]] # 是的，如果用jdk11.0，androidkiller编译后安装不上。  配置环境变量   CLASSPATH -&amp;gt; .;&amp;#34;JAVA_HOME&amp;#34;/lib/dt.jar;&amp;#34;JAVA_HOME&amp;#34;/lib/tools.jar （应该是 .;%JAVA_HOME%\lib;%JAVA_HOME%\lib→ols.jar ？） JAVA_HOME -&amp;gt; C:Program Files\Java\jdk1.7.0_80 PATH -&amp;gt; &amp;#34;JAVA_HOME&amp;#34;/bin;&amp;#34;JAVA_HOME&amp;#34;/lib/tools.jar;
  https://www.cnblogs.com/echomyecho/p/3334617.html
@@ -461,10 +461,10 @@ apt-get install default-jre apt-get install default-jdk #去Oracle官方网站�
     
     <item>
       <title>编码</title>
-      <link>https://1980204066.github.io.git/2016/03/04/%E7%BC%96%E7%A0%81/</link>
+      <link>https://1980204066.github.io/2016/03/04/%E7%BC%96%E7%A0%81/</link>
       <pubDate>Fri, 04 Mar 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://1980204066.github.io.git/2016/03/04/%E7%BC%96%E7%A0%81/</guid>
+      <guid>https://1980204066.github.io/2016/03/04/%E7%BC%96%E7%A0%81/</guid>
       <description>https://blog.csdn.net/cean1024/article/details/72903069
 第一，为什么在运行程序时，在终端按下箭头up down left right 箭头会出现 ^［A^［B^［C^［D
 这个跟换键码有关，“escape sequence”实际上是用来生成换码符的关键字的顺序。换码符会告诉打印机将不再打印后面的字符，但是还要将这些字符解释为一类打印机控制码或其他。需要 Escape Sequences 顺序的应用程序通常是早期的 DOS 应用程序、UNIX (R) 应用程序或非常特殊的应用程序。
@@ -475,10 +475,10 @@ up - &amp;ldquo;\033[A&amp;rdquo; down - &amp;ldquo;\033[B&amp;rdquo; left - &am
     
     <item>
       <title>sqlite子查询</title>
-      <link>https://1980204066.github.io.git/2015/09/01/sqlite%E5%AD%90%E6%9F%A5%E8%AF%A2/</link>
+      <link>https://1980204066.github.io/2015/09/01/sqlite%E5%AD%90%E6%9F%A5%E8%AF%A2/</link>
       <pubDate>Tue, 01 Sep 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://1980204066.github.io.git/2015/09/01/sqlite%E5%AD%90%E6%9F%A5%E8%AF%A2/</guid>
+      <guid>https://1980204066.github.io/2015/09/01/sqlite%E5%AD%90%E6%9F%A5%E8%AF%A2/</guid>
       <description>https://www.yiibai.com/sqlite/sqlite_sub_queries.html
 sqlite&amp;gt; SELECT * FROM COMPANY WHERE ID IN (SELECT ID FROM COMPANY WHERE SALARY &amp;gt; 45000) ; insert into revtbl select * from revtbl; DROP VIEW IF EXISTS v_test; CREATE VIEW IF NOT EXISTS v_test AS SELECT * FROM test;
 SQLite 3 一些基本的使用 https://www.cnblogs.com/Mr_JinRui/archive/2010/05/12/1733662.html</description>
@@ -486,10 +486,10 @@ SQLite 3 一些基本的使用 https://www.cnblogs.com/Mr_JinRui/archive/2010/05
     
     <item>
       <title>god语言</title>
-      <link>https://1980204066.github.io.git/2015/08/27/god%E8%AF%AD%E8%A8%80/</link>
+      <link>https://1980204066.github.io/2015/08/27/god%E8%AF%AD%E8%A8%80/</link>
       <pubDate>Thu, 27 Aug 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://1980204066.github.io.git/2015/08/27/god%E8%AF%AD%E8%A8%80/</guid>
+      <guid>https://1980204066.github.io/2015/08/27/god%E8%AF%AD%E8%A8%80/</guid>
       <description>目前的计算机语言有c++11，go，D，还有别人实现的一个C++山寨版（已开源），
 https://github.com/roundsheep/rpp https://www.newsmth.net/nForum/#!article/CPlusPlus/372449
 世界太杂碎了。
@@ -510,10 +510,10 @@ god kernel特性：
     
     <item>
       <title>使用boost</title>
-      <link>https://1980204066.github.io.git/2015/03/06/%E4%BD%BF%E7%94%A8boost/</link>
+      <link>https://1980204066.github.io/2015/03/06/%E4%BD%BF%E7%94%A8boost/</link>
       <pubDate>Fri, 06 Mar 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://1980204066.github.io.git/2015/03/06/%E4%BD%BF%E7%94%A8boost/</guid>
+      <guid>https://1980204066.github.io/2015/03/06/%E4%BD%BF%E7%94%A8boost/</guid>
       <description>Table of Contents  使用boost执行base64解码 Serialization 可变长度的网络消息数据打包  使用boost执行base64解码 https://microcai.org/2013/03/28/boost-base64.html
 base64 编码最初是为了电子邮件开发的。因为电子邮件是个文本协议，不能传输二进制数据，甚至中文也无法进行传输。只能传输ascii编码的文本。这样一来就诞生了多种将二进制数据编码到ascii里的编码方案，base64是其中之一。
 base64是一种非常简单的编码，只要进行一次迭代即可完成解码。
@@ -533,10 +533,10 @@ struct is_base64_char { bool operator()(char x) { return boost::is_any_of(&amp;q
     
     <item>
       <title>从std::cout和endl说起</title>
-      <link>https://1980204066.github.io.git/2015/02/06/%E4%BB%8Estd::cout%E5%92%8Cendl%E8%AF%B4%E8%B5%B7/</link>
+      <link>https://1980204066.github.io/2015/02/06/%E4%BB%8Estd::cout%E5%92%8Cendl%E8%AF%B4%E8%B5%B7/</link>
       <pubDate>Fri, 06 Feb 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://1980204066.github.io.git/2015/02/06/%E4%BB%8Estd::cout%E5%92%8Cendl%E8%AF%B4%E8%B5%B7/</guid>
+      <guid>https://1980204066.github.io/2015/02/06/%E4%BB%8Estd::cout%E5%92%8Cendl%E8%AF%B4%E8%B5%B7/</guid>
       <description>https://www.cnblogs.com/lihaozy/archive/2012/05/09/2491791.html https://blog.csdn.net/hityct1/article/details/4082832
 正文  问题是这样的&amp;hellip;&amp;hellip;
 相信下面这个程序凡是会写C++程序的同仁都认得，估计学会的第一个C++程序就是它了吧：
@@ -556,19 +556,19 @@ template basic_ostream&amp;amp; endl(basic_ostream&amp;amp; os);
     
     <item>
       <title>C&#43;&#43;11语法甜点</title>
-      <link>https://1980204066.github.io.git/2015/01/30/C&#43;&#43;11%E8%AF%AD%E6%B3%95%E7%94%9C%E7%82%B9/</link>
+      <link>https://1980204066.github.io/2015/01/30/C&#43;&#43;11%E8%AF%AD%E6%B3%95%E7%94%9C%E7%82%B9/</link>
       <pubDate>Fri, 30 Jan 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://1980204066.github.io.git/2015/01/30/C&#43;&#43;11%E8%AF%AD%E6%B3%95%E7%94%9C%E7%82%B9/</guid>
+      <guid>https://1980204066.github.io/2015/01/30/C&#43;&#43;11%E8%AF%AD%E6%B3%95%E7%94%9C%E7%82%B9/</guid>
       <description>https://www.cnblogs.com/hujian/archive/2012/02/20/2358853.html</description>
     </item>
     
     <item>
       <title>Git代理设置与访问Github</title>
-      <link>https://1980204066.github.io.git/2015/01/29/Git%E4%BB%A3%E7%90%86%E8%AE%BE%E7%BD%AE%E4%B8%8E%E8%AE%BF%E9%97%AEGithub/</link>
+      <link>https://1980204066.github.io/2015/01/29/Git%E4%BB%A3%E7%90%86%E8%AE%BE%E7%BD%AE%E4%B8%8E%E8%AE%BF%E9%97%AEGithub/</link>
       <pubDate>Thu, 29 Jan 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://1980204066.github.io.git/2015/01/29/Git%E4%BB%A3%E7%90%86%E8%AE%BE%E7%BD%AE%E4%B8%8E%E8%AE%BF%E9%97%AEGithub/</guid>
+      <guid>https://1980204066.github.io/2015/01/29/Git%E4%BB%A3%E7%90%86%E8%AE%BE%E7%BD%AE%E4%B8%8E%E8%AE%BF%E9%97%AEGithub/</guid>
       <description>https://blog.csdn.net/bluishglc/article/details/37807501
 由于目前工作的网络环境有着很严格的限制，可以说最近在通过代理访问Github上颇费了一些周折，也积累了一些相关的经验，觉得有必要备忘一下。本着&amp;quot;不重新发明轮子&amp;quot;的宗旨，本文不会对Github代理设置的每一个细节进行赘述，文中会给出现成的参考文章，这里要做的是针对一些重要的问题进行解释和补充，相信一定能给遇到同样问题朋友以帮助。本文原文出处:https://blog.csdn.net/bluishglc/article/details/37807501 严禁任何形式的转载，否则将委托CSDN官方维护权益！
 1. 别折腾了，请先屏蔽NTLM验证！
@@ -590,10 +590,10 @@ ssh -T -p 443 git@ssh.github.com
     
     <item>
       <title>给Git或者APT设置goagent代理</title>
-      <link>https://1980204066.github.io.git/2015/01/28/%E7%BB%99Git%E6%88%96%E8%80%85APT%E8%AE%BE%E7%BD%AEgoagent%E4%BB%A3%E7%90%86/</link>
+      <link>https://1980204066.github.io/2015/01/28/%E7%BB%99Git%E6%88%96%E8%80%85APT%E8%AE%BE%E7%BD%AEgoagent%E4%BB%A3%E7%90%86/</link>
       <pubDate>Wed, 28 Jan 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://1980204066.github.io.git/2015/01/28/%E7%BB%99Git%E6%88%96%E8%80%85APT%E8%AE%BE%E7%BD%AEgoagent%E4%BB%A3%E7%90%86/</guid>
+      <guid>https://1980204066.github.io/2015/01/28/%E7%BB%99Git%E6%88%96%E8%80%85APT%E8%AE%BE%E7%BD%AEgoagent%E4%BB%A3%E7%90%86/</guid>
       <description> 最近使用git从github上clone代码，总是失败，奔溃了快。还有ubuntu连apt-get update都执行不了，有的时候都装不了git，就快骂娘了。可惜在这样一个环境下，只能靠自己搞定了，设置代理是比较好的方式
  引用https://yansu.org/2013/05/20/set-proxy-for-git-or-apt.html 安装goagent 这个教程网上很多，放狗一搜即可。
 不过网上goagent教程里讲的大部分是给浏览器用的。其实goagent是监听了本地的8087端口，其实任何程序都可以利用这个端口，只要设置好即可。
@@ -605,20 +605,20 @@ ssh -T -p 443 git@ssh.github.com
     
     <item>
       <title>C&#43;&#43;14的returntypededuction&amp;</title>
-      <link>https://1980204066.github.io.git/2015/01/26/C&#43;&#43;14%E7%9A%84returntypededuction&amp;/</link>
+      <link>https://1980204066.github.io/2015/01/26/C&#43;&#43;14%E7%9A%84returntypededuction&amp;/</link>
       <pubDate>Mon, 26 Jan 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://1980204066.github.io.git/2015/01/26/C&#43;&#43;14%E7%9A%84returntypededuction&amp;/</guid>
+      <guid>https://1980204066.github.io/2015/01/26/C&#43;&#43;14%E7%9A%84returntypededuction&amp;/</guid>
       <description>https://www.newsmth.net/nForum/#!article/CPlusPlus/374960
 若干年前实现了一个 C++ 序列化库，以前一直纠结于一种优化无法（自动）实现： struct A { int a1, a2; }; struct B { int b1, b2; }; struct C { A ca; B cb; }; struct D { std::set d; }; DATA_IO_LOAD_SAVE_E(A, &amp;amp;a1 &amp;amp;a2) // 序列化 A 的 a1, a2 成员，下同 DATA_IO_LOAD_SAVE_E(B, &amp;amp;b1 &amp;amp;b2) DATA_IO_LOAD_SAVE_E(C, &amp;amp;ca &amp;amp;cb) DATA_IO_LOAD_SAVE_E(D, &amp;amp;d) // stl 容器也可以序列化  如果使用 NativeDataInput/Output, 只能自动推断出 A, B 可以直接 memcpy，无法推断出 C 也可以 memcpy，当然，任何情况下 D 肯定都是 无法 memcpy 的  现在有了 return type deduction, C memcpy 的问题就解决了  参考链接： https://www.</description>
     </item>
     
     <item>
       <title>开源一个重剑无锋大巧不工</title>
-      <link>https://1980204066.github.io.git/2015/01/26/%E5%BC%80%E6%BA%90%E4%B8%80%E4%B8%AA%E9%87%8D%E5%89%91%E6%97%A0%E9%94%8B%E5%A4%A7%E5%B7%A7%E4%B8%8D%E5%B7%A5/</link>
+      <link>https://1980204066.github.io/2015/01/26/%E5%BC%80%E6%BA%90%E4%B8%80%E4%B8%AA%E9%87%8D%E5%89%91%E6%97%A0%E9%94%8B%E5%A4%A7%E5%B7%A7%E4%B8%8D%E5%B7%A5/</link>
       <pubDate>Mon, 26 Jan 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://1980204066.github.io.git/2015/01/26/%E5%BC%80%E6%BA%90%E4%B8%80%E4%B8%AA%E9%87%8D%E5%89%91%E6%97%A0%E9%94%8B%E5%A4%A7%E5%B7%A7%E4%B8%8D%E5%B7%A5/</guid>
+      <guid>https://1980204066.github.io/2015/01/26/%E5%BC%80%E6%BA%90%E4%B8%80%E4%B8%AA%E9%87%8D%E5%89%91%E6%97%A0%E9%94%8B%E5%A4%A7%E5%B7%A7%E4%B8%8D%E5%B7%A5/</guid>
       <description>https://www.newsmth.net/nForum/#!article/CPlusPlus/374960 https://github.com/rockeet/nark-rpc  RPC(Remote Procedure Call) on top of nark-serialization  +++++++++++++++++++++++++++++++++++++  https://github.com/rockeet/nark-serialization  An easy, fast, small, portable C++ object serialization framework  Features:  Declarative syntax, Easy to use, Easy to integrate  Fast at runtime, Fast at compile time  Serialized data is small, Compiled code is small  Support STL containers &amp;amp; types  Can serialize to BigEndian/LittleEndian in any platform  Support variant int/uint encoding  Optional serialization version control  More and more.</description>
     </item>
     
