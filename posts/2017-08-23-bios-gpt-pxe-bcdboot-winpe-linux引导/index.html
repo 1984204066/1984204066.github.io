@@ -1,0 +1,626 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <title>Bios Gpt Pxe Bcdboot Winpe Linux引导 // 不动闲心 の blog</title>
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.89.4" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="John Doe" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="https://1980204066.github.io.git/css/main.min.4a7ec8660f9a44b08c4da97c5f2e31b1192df1d4d0322e65c0dbbc6ecb1b863f.css" />
+
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Bios Gpt Pxe Bcdboot Winpe Linux引导"/>
+<meta name="twitter:description" content="bios &#43; gpt 折腾   一点注意：
+ grub2-install /dev/sda
+ 把core.img写入Boot Partition.不是sda1.
+ references:
+ https://www.lightofdawn.org/wiki/wiki.cgi/BIOSBootGPT
+ https://blog.csdn.net/sqhxhg/article/details/8456689
+BIOS系统：   1、GRUB（2）：需要2MiB”BIOS启动分区”（requires a 2 MiB &#34;BIOS Boot Partition&#34; (EF02 type code in gdisk and bios_grub flag in GNU Parted) in BIOS systems to embed itscore.img file due to lack of post-MBR embed gap in GPT disks. Runtime GPT support in GRUB(2) is provided by thepart_gpt module. SeeGRUB#GPT_specific_instructions for more information）;"/>
+
+    <meta property="og:title" content="Bios Gpt Pxe Bcdboot Winpe Linux引导" />
+<meta property="og:description" content="bios &#43; gpt 折腾   一点注意：
+ grub2-install /dev/sda
+ 把core.img写入Boot Partition.不是sda1.
+ references:
+ https://www.lightofdawn.org/wiki/wiki.cgi/BIOSBootGPT
+ https://blog.csdn.net/sqhxhg/article/details/8456689
+BIOS系统：   1、GRUB（2）：需要2MiB”BIOS启动分区”（requires a 2 MiB &#34;BIOS Boot Partition&#34; (EF02 type code in gdisk and bios_grub flag in GNU Parted) in BIOS systems to embed itscore.img file due to lack of post-MBR embed gap in GPT disks. Runtime GPT support in GRUB(2) is provided by thepart_gpt module. SeeGRUB#GPT_specific_instructions for more information）;" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://1980204066.github.io.git/posts/2017-08-23-bios-gpt-pxe-bcdboot-winpe-linux%E5%BC%95%E5%AF%BC/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2017-08-23T00:00:00+00:00" />
+<meta property="article:modified_time" content="2017-08-23T00:00:00+00:00" />
+
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://1980204066.github.io.git"><img class="app-header-avatar" src="/avatar.jpg" alt="John Doe" /></a>
+      <h1>不动闲心 の blog</h1>
+      <nav class="app-header-menu">
+          <a class="app-header-menu-item" href="/tags/">Tags</a>
+      </nav>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vehicula turpis sit amet elit pretium.</p>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">Bios Gpt Pxe Bcdboot Winpe Linux引导</h1>
+      <div class="post-meta">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          Aug 23, 2017
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          5 min read
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tag">
+  <title>tag</title>
+  <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line>
+</svg>
+              <a class="tag" href="https://1980204066.github.io.git/tags/it/">it</a>
+        </div>
+      </div>
+    </header>
+    <div class="post-content">
+      
+<div id="outline-container-headline-1" class="outline-2">
+<h2 id="headline-1">
+bios + gpt 折腾
+</h2>
+<div id="outline-text-headline-1" class="outline-text-2">
+<p>
+一点注意：</p>
+<p>
+grub2-install /dev/sda</p>
+<p>
+把core.img写入Boot Partition.不是sda1.</p>
+<p>
+references:</p>
+<p>
+https://www.lightofdawn.org/wiki/wiki.cgi/BIOSBootGPT</p>
+<p>
+https://blog.csdn.net/sqhxhg/article/details/8456689</p>
+<div id="outline-container-headline-2" class="outline-3">
+<h3 id="headline-2">
+BIOS系统：
+</h3>
+<div id="outline-text-headline-2" class="outline-text-3">
+<p>
+1、GRUB（2）：需要2MiB”BIOS启动分区”（requires a 2 MiB &#34;BIOS Boot Partition&#34; (EF02 type code in gdisk and bios_grub flag in GNU Parted) in BIOS systems to embed itscore.img file due to lack of post-MBR embed gap in GPT disks. Runtime GPT support in GRUB(2) is provided by thepart_gpt module. See<a href="https://wiki.archlinux.org/index.php/GRUB#GPT_specific_instructions">GRUB#GPT_specific_instructions</a> for more information）;</p>
+<p>
+https://wiki.archlinux.org/index.php/GRUB</p>
+<p>
+On a BIOS/<a href="https://wiki.archlinux.org/index.php/GPT">GPT</a> configuration a <a href="https://www.gnu.org/software/grub/manual/html_node/BIOS-installation.html">BIOS boot partition</a> is required. GRUB embeds its core.img into this partition.</p>
+<p>
+<strong>Note:</strong></p>
+<ul>
+<li>
+<p>Before attempting this method keep in mind that not all systems will be able to support this partitioning scheme. Read more on <a href="https://wiki.archlinux.org/index.php/GUID_Partition_Table#BIOS_systems">GUID partition tables</a>[<a href="https://wiki.archlinux.org/index.php/ArchWiki:Requests#Broken_section_links">broken link</a>: invalid section].</p>
+</li>
+<li>
+<p>This additional partition is only needed on a GRUB, BIOS/GPT partitioning scheme. Previously, for a GRUB, BIOS/MBR partitioning scheme, GRUB used the Post-MBR gap for the embedding the core.img). GRUB for GPT, however, does not use the Post-GPT gap to conform to GPT specifications that require 1_megabyte/2048_sector disk boundaries.</p>
+</li>
+<li>
+<p>For <a href="https://wiki.archlinux.org/index.php/UEFI">UEFI</a> systems this extra partition is not required, since no embedding of boot sectors takes place in that case. However, UEFI systems still require an <a href="https://wiki.archlinux.org/index.php/ESP">ESP</a>.</p>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-headline-3" class="outline-3">
+<h3 id="headline-3">
+grub 安装到c盘。
+</h3>
+<div id="outline-text-headline-3" class="outline-text-3">
+<p>
+grub2-install –boot-directory=/mnt/c /dev/sda</p>
+<p>
+syslinux/memdisk –&gt; /mnt/c/syslinux/memdisk </p>
+<blockquote>
+<p>
+menuentry &#39;Windows 7 (from VHD)&#39; –class windows –class os
+$menuentry_id_option &#39;osprober-chain-082608C02608B0AC&#39; {</p>
+<p>
+        insmod part_gpt</p>
+<p>
+        insmod ntfs</p>
+<p>
+        set root=&#39;hd0,gpt3&#39;</p>
+<p>
+        if [ x$feature_platform_search_hint = xy ]; then</p>
+<p>
+          search
+–no-floppy –fs-uuid –set=root –hint-bios=hd0,gpt3 –hint-efi=hd0,gpt3 –hint-baremetal=ahci0,gpt3 
+082608C02608B0AC</p>
+<p>
+        else</p>
+<p>
+          search –no-floppy –fs-uuid –set=root 082608C02608B0AC</p>
+<p>
+        fi</p>
+<p>
+        linux16 /syslinux/memdisk harddisk</p>
+<p>
+        initrd16 /cwbootmgr.vhd</p>
+<p>
+}</p>
+</blockquote>
+</div>
+</div>
+<div id="outline-container-headline-4" class="outline-3">
+<h3 id="headline-4">
+Hybrid 方法：
+</h3>
+<div id="outline-text-headline-4" class="outline-text-3">
+<p>
+https://www.rodsbooks.com/gdisk/hybrid.html</p>
+<p>
+https://www.rodsbooks.com/gdisk/bios.html</p>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-headline-5" class="outline-2">
+<h2 id="headline-5">
+reference :
+</h2>
+<div id="outline-text-headline-5" class="outline-text-2">
+<p>
+https://blog.csdn.net/littlesmallless/article/details/59173072</p>
+<p>
+https://bbs.pcbeta.com/viewthread-1573292-1-1.html</p>
+</div>
+</div>
+<div id="outline-container-headline-6" class="outline-2">
+<h2 id="headline-6">
+引导Fedora.iso简记
+</h2>
+<div id="outline-text-headline-6" class="outline-text-2">
+<p>
+grub2-install –target=i386-pc –boot-directory=/mnt/usb /dev/sdc  </p>
+<p>
+ 我的custom.cfg位于(usb)/boot/grub2/custom.cfg</p>
+<p>
+网上的可以试试：</p>
+<p>
+<a href="https://blog.csdn.net/bingo_boy/article/details/6957698">fedora 16 livecd硬盘u盘 安装</a> 新建一个目录, 比如fedora, 然后将iso解压到此文件夹中. 则grub.cfg需要修改成如下</p>
+<pre class="example">
+menuentry &#34;Fedora Live CD&#34;{
+set root=&#34;(hd0,msdos1)&#34;
+ linux/fedora/isolinux/vmlinuz0 root=UUID=0C02-A283 live_dir=/fedora/LiveOS/ liveimg quiet rhgb rootfstype=auto
+ initrd /fedora/isolinux/initrd0.img
+ }
+</pre>
+<div class="src src-sh">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">  vgscan
+
+  vgchange -a y fedora
+
+  mount /dev/mapper/fedora-root  /mnt
+
+  mount /dev/sda8 /mnt/boot
+
+  mount /dev/sda2 /mnt/boot/efi
+  mount --bind /dev/ /mnt/dev
+  mount --bind /dev/pts /mnt/dev/pts
+  mount --bind /proc /mnt/proc
+  mount --bind /sys /mnt/sys
+
+  chroot /mnt
+
+  grub-install --target<span style="color:#f92672">=</span>x86_64-efi /dev/sda
+
+  <span style="color:#75715e"># 然后系统报错</span>
+  <span style="color:#75715e"># grub2-install: error: /usr/lib/grub/x86_64-efi/modinfo.sh</span>
+  <span style="color:#75715e"># doesn&#39;t exist. Please specify --target or --directory</span>
+
+  dnf reinstall  grub2-efi-x64.x86_64
+
+  dnf install grub2-efi-x64-modules.noarch
+
+  grub2-mkconfig -o /boot/efi/EFI/fedora/grub.cfg
+
+  exit<span style="color:#f92672">&amp;&amp;</span>sudo umount/mnt/sys <span style="color:#f92672">&amp;&amp;</span>sudo umount/mnt/proc <span style="color:#f92672">&amp;&amp;</span>sudo umount/mnt/dev/pts <span style="color:#f92672">&amp;&amp;</span>sudo umount/mnt/dev <span style="color:#f92672">&amp;&amp;</span>sudo umount/mnt
+
+  grub2-mkconfig -o /boot/efi/EFI/fedora/grub.cfg</code></pre></div>
+</div>
+</div>
+</div>
+<div id="outline-container-headline-7" class="outline-2">
+<h2 id="headline-7">
+pxe安装linux26尝试
+</h2>
+<div id="outline-text-headline-7" class="outline-text-2">
+<p>
+1.配置dnsmasq(dns, dhcp,tftp)</p>
+<p>
+2.配置ftp</p>
+<p>
+似乎直接用grub2也可以？</p>
+<div class="src src-shell">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">grub2-mkimage  -O i386-pc -d  /usr/lib/grub/i386-pc/ -c first.cfg -p <span style="color:#e6db74">&#39;(pxe)/boot/grub&#39;</span> -o i386-pc-core.img -v echo biosdisk blocklist newc cpio fat iso9660 part_msdos ext2 ntfs loopback reboot halt</code></pre></div>
+</div>
+<p>
+设置prefix=(tftp,10.9.9.1)/boot/grub 没有试过。</p>
+<p>
+cat /usr/lib/grub/i386-pc/pxeboot.img i386-pc-core.img &gt; grub2pxe.0</p>
+<p>
+boot放置grub2需要的stage2文件。</p>
+<p>
+find boot | cpio -o -H newc &gt; winly.pkg</p>
+<p>
+#cat first.cfg</p>
+<p>
+loopback winly
+/winly.pkg  ##指令启动的第一时间，首先回放winly.pkg到虚拟的winly磁盘</p>
+<p>
+set prefix=(winly)/boot/grub
+ ##指定启动模块的位置到这个虚拟winly磁盘的/boot/grub</p>
+<p>
+set pager=1  ##设定手动翻页</p>
+<p>
+这里root应该设成(tftp,10.9.9.1) ?</p>
+<p>
+3.使用syslinux</p>
+<p>
+https://docs.fedoraproject.org/en-US/Fedora/26/html/Installation_Guide/pxe-bootloader.html</p>
+<p>
+Create a boot menu for BIOS clients at /var/lib/tftpboot/pxelinux.cfg/default.</p>
+<blockquote>
+<p>default vesamenu.c32
+prompt 1
+timeout 600</p>
+<p>
+label linux
+menu label ^Install Fedora 26 64-bit
+menu default
+kernel f26/vmlinuz
+append initrd=f26/initrd.img inst.stage2=<a href="http://download.fedoraproject.org/pub/fedora/linux/releases/26/Server/x86_64/os/">http://download.fedoraproject.org/pub/fedora/linux/releases/26/Server/x86_64/os/</a> ip=dhcp</p>
+<p>
+label server
+menu label ^Install Fedora 26 ( Minimal Image )
+menu default
+kernel f26/vmlinuz
+append initrd=f26/initrd.img inst.stage2=<a href="http://download.fedoraproject.org/pub/fedora/linux/releases/26/Server/x86_64/os/">http://download.fedoraproject.org/pub/fedora/linux/releases/26/Server/x86_64/os/</a> ip=dhcp ks=<a href="https://example.com/fedora/kickstarts/minimal.ks">https://example.com/fedora/kickstarts/minimal.ks</a></p>
+<p>
+label rescue
+menu label ^Rescue installed system
+kernel f26/vmlinuz
+append initrd=f26initrd.img ip=dhcp root=live:<a href="http://download.fedoraproject.org/pub/fedora/linux/releases/26/Server/x86_64/os/LiveOS/squashfs.img">http://download.fedoraproject.org/pub/fedora/linux/releases/26/Server/x86_64/os/LiveOS/squashfs.img</a> rescue</p>
+<p>
+label local
+menu label Boot from ^local drive
+localboot 0xffff</p>
+</blockquote>
+<ol>
+<li>
+<p>pxe + UEFI 使用shim。</p>
+</li>
+</ol>
+<p><a href="https://docs.fedoraproject.org/en-US/Fedora/26/html/Installation_Guide/pxe-bootloader.html">https://docs.fedoraproject.org/en-US/Fedora/26/html/Installation_Guide/pxe-bootloader.html</a></p>
+<p>
+cp shim.efi, grubx64.efi -&gt; <em>tftpboot</em></p>
+<ol>
+<li>
+<p>让x64 +UEFI 的机器使用shim</p>
+</li>
+</ol>
+<p>主要是这个</p>
+<p>
+dhcp-match=set:efi-x86_64,option:client-arch,7</p>
+<p>
+dhcp-match=set:efi-x86_64,option:client-arch,9</p>
+<p>
+dhcp-match=set:efi-x86,option:client-arch,6</p>
+<p>
+dhcp-match=set:bios,option:client-arch,0</p>
+<p>
+dhcp-boot=tag:efi-x86_64,shim.efi</p>
+<p>
+dhcp-boot=tag:efi-x86,&#34;efi32/syslinux.efi&#34;</p>
+<p>
+dhcp-boot=tag:bios,pxelinux.0</p>
+<p>
+cat /etc/dnsmasq.conf</p>
+<blockquote>
+<p>server=127.0.0.1</p>
+<p>
+server=114.114.114.114</p>
+<p>
+server=8.8.8.8</p>
+<p>
+address=/bogon/127.0.0.1</p>
+<p>
+except-interface=wlp2s2</p>
+<p>
+dhcp-range=10.9.9.10,10.9.9.150,12h</p>
+<p>
+dnsmasq</p>
+<p>
+dhcp-match=set:efi-x86_64,option:client-arch,7</p>
+<p>
+dhcp-match=set:efi-x86_64,option:client-arch,9</p>
+<p>
+dhcp-match=set:efi-x86,option:client-arch,6</p>
+<p>
+dhcp-match=set:bios,option:client-arch,0</p>
+<p>
+dhcp-boot=tag:efi-x86_64,shim.efi</p>
+<p>
+dhcp-boot=tag:efi-x86,&#34;efi32/syslinux.efi&#34;</p>
+<p>
+dhcp-boot=tag:bios,pxelinux.0</p>
+<p>
+enable-tftp</p>
+<p>
+tftp-root=/tftpboot</p>
+<p>
+conf-dir=/etc/dnsmasq.d,.rpmnew,.rpmsave,.rpmorig</p>
+</blockquote>
+<p>
+6.最后是shim 调用grub2的配置文件。</p>
+<p>
+cat /tftpboot/EFI/fedora</p>
+<blockquote>
+<p>function load_video {</p>
+<p>
+insmod efi_gop</p>
+<p>
+insmod efi_uga</p>
+<p>
+insmod video_bochs</p>
+<p>
+insmod video_cirrus</p>
+<p>
+insmod all_video</p>
+<p>
+}</p>
+<p>
+load_video</p>
+<p>
+set gfxpayload=keep</p>
+<p>
+insmod gzio</p>
+<p>
+menuentry &#39;Install Fedora 64-bit&#39;  –class fedora –class gnu-linux
+–class gnu –class os {</p>
+<p>
+linuxefi f26/vmlinuz ip=dhcp inst.repo=<a href="ftp://10.9.9.1/pub/LiveOS/">ftp://10.9.9.1/pub/LiveOS/</a></p>
+<p>
+initrdefi f26/initrd.img</p>
+<p>
+}</p>
+<p>
+menuentry &#39;Rescue installed system&#39;  –class fedora –class gnu-linux
+–class gnu –class os {</p>
+<p>
+linuxefi f26/vmlinuz ip=dhcp
+root=live:<a href="ftp://10.9.9.1/pub/LiveOS/squashfs.img">ftp://10.9.9.1/pub/LiveOS/squashfs.img</a></p>
+<p>
+initrdefi f26/initrd.img</p>
+<p>
+}</p>
+</blockquote>
+</div>
+</div>
+<div id="outline-container-headline-8" class="outline-2">
+<h2 id="headline-8">
+用qemu修复win10 bcdboot
+</h2>
+<div id="outline-text-headline-8" class="outline-text-2">
+<blockquote>
+<p>qemu-img create -f qcow2 fedora.img 1G
+  qemu-system-x86_64 -m 50 fedora.img -cdrom ./ReactOS-LiveCD.iso</p>
+<p>
+  grep -E &#39;vmx|svm&#39; /proc/cpuinfo；# 检查KVM是否可用：</p>
+<p>
+  lsmod | grep kvm</p>
+<p>
+  qemu-system-x86_64 -m 2048 -enable-kvm fedora.img -cdrom ./Fedora-Live-Desktop-x86_64
+  qemu-img create -f qcow2 fedora.img 1G</p>
+<p>
+  qemu-system-x86_64 -m 50 fedora.img -cdrom ./ReactOS-LiveCD.iso</p>
+<p>
+  grep -E &#39;vmx|svm&#39; /proc/cpuinfo；# 检查KVM是否可用：</p>
+<p>
+  lsmod | grep kvm</p>
+<p>
+  qemu-system-x86_64 -m 2048 -enable-kvm fedora.img -cdrom ./Fedora-Live-Desktop-x86_64-20-1.iso</p>
+</blockquote>
+<p>
+可以运行，但是没有增加磁盘。</p>
+<blockquote>
+<p>qemu-system-x86_64 -M pc –enable-kvm -m 2048 -cdrom Win10PEx64.iso
+  -drive file=test.img,if=none,id=drive-ide0-0-0,format=raw</p>
+<p>
+  qemu-system-x86_64 -m 2048 -name tst -smp 2 -blockdev
+  driver=raw,node-name=disk,file.driver=file,file.filename=test.img
+  -cdrom Win10PEx64.iso</p>
+<p>
+  qemu-system-x86_64 -M pc –enable-kvm -m 2048 -hda test.img -cdrom
+  Win10PEx64.iso</p>
+</blockquote>
+<p>
+实际上是有的：用win10安装盘可以看到硬盘。</p>
+<blockquote>
+<p>qemu-kvm -m 2048 -name tst -smp 2 -hda test.img -cdrom win10.iso</p>
+<p>sudo qemu-system-x86_64 –M pc -m memsize –enable-kvm -hda imgname -net nic,model=virtio,vlan=0,macaddr=00:e0:fc:00:00:01 -net tap,vlan=0,ifname=tap0,script=no -cdrom virtio-win-0.1-100.iso -usbdevice tablet -vga std -boot c </p>
+</blockquote>
+<p>
+定义一个虚拟机：可以用gnome-boxes创建一个，然后virsh dumpxml win10 &gt; win10.xml 做参考。\\</p>
+<p>
+virsh define win10.xml       //创建虚拟机\\</p>
+<blockquote>
+<p>&lt;domain type=&#39;kvm&#39;&gt; //如果是Xen，则type=&#39;xen&#39; <br>
+  &lt;name&gt;win10&lt;/name&gt; //虚拟机名称，同一物理机唯一 <br>
+  &lt;uuid&gt;fd3535db-2558-43e9-b067-314f48211343&lt;/uuid&gt; //同一物理机唯一，可用uuidgen生成 <br>
+  &lt;memory&gt;524288&lt;/memory&gt; //内存，单位K 1048576 = 1G, 524288 = 500M<br>
+  &lt;currentMemory&gt;524288&lt;/currentMemory&gt; //memory这两个值最好设成一样 <br>
+  &lt;vcpu&gt;2&lt;/vcpu&gt; //虚拟机可使用的cpu个数，查看物理机可用CPU个数：cat /proc/cpuinfo |grep processor | wc -l &lt;os&gt; <br>
+  &lt;type arch=&#39;x86_64&#39; machine=&#39;pc&#39;&gt;hvm&lt;/type&gt; //arch指出系统架构类型，machine 则是机器类型，查看机器类型：qemu-system-x86_64 -M help? <br>
+  &lt;boot dev=&#39;hd&#39;/&gt; //启动介质，第一次需要装系统可以选择cdrom光盘启动 <br>
+  &lt;boot dev=&#39;cdrom&#39;/&gt;
+  &lt;bootmenu enable=&#39;yes&#39;/&gt; //表示启动按F12进入启动菜单 <br>
+  &lt;/os&gt; 
+  &lt;features&gt; <br>
+  &lt;acpi/&gt; //Advanced Configuration and Power Interface,高级配置与电源接口 <br>
+  &lt;apic/&gt; //Advance<br>
+  &lt;/features&gt;<br>
+    &lt;cpu mode=&#39;custom&#39; match=&#39;exact&#39;&gt;<br>
+      &lt;model fallback=&#39;allow&#39;&gt;Westmere&lt;/model&gt;<br>
+    &lt;/cpu&gt;<br>
+    &lt;clock offset=&#39;utc&#39;&gt;<br>
+      &lt;timer name=&#39;rtc&#39; tickpolicy=&#39;catchup&#39;/&gt;<br>
+      &lt;timer name=&#39;pit&#39; tickpolicy=&#39;delay&#39;/&gt;<br>
+      &lt;timer name=&#39;hpet&#39; present=&#39;no&#39;/&gt;<br>
+    &lt;/clock&gt;<br>
+    &lt;on_poweroff&gt;destroy&lt;/on_poweroff&gt;<br>
+    &lt;on_reboot&gt;restart&lt;/on_reboot&gt;<br>
+    &lt;on_crash&gt;restart&lt;/on_crash&gt;<br>
+    &lt;pm&gt;<br>
+      &lt;suspend-to-mem enabled=&#39;no&#39;/&gt;<br>
+      &lt;suspend-to-disk enabled=&#39;no&#39;/&gt;<br>
+    &lt;/pm&gt;<br>
+  &lt;devices&gt;<br>
+      &lt;emulator&gt;/usr/bin/qemu-kvm&lt;/emulator&gt;      #模拟器：qemu-kvm<br>
+      &lt;disk type=&#39;file&#39; device=&#39;disk&#39;&gt;                #disk 磁盘<br>
+        &lt;driver name=&#39;qemu&#39; type=&#39;raw&#39;/&gt;<br>
+        &lt;source file=&#39;/home/gsdj/test.img&#39;/&gt;<br>
+        &lt;target dev=&#39;hdb&#39; bus=&#39;ide&#39;/&gt;</p>
+<p>
+       #<a href="https://blog.51cto.com/yinweiai/2109033"><a href="https://blog.51cto.com/yinweiai/2109033">https://blog.51cto.com/yinweiai/2109033</a>
+   </a><br>
+        &lt;address type=&#39;drive&#39; controller=&#39;0&#39; bus=&#39;1&#39; target=&#39;0&#39;
+  unit=&#39;0&#39;/&gt;\\</p>
+<p>function=&#39;0x0&#39;/&gt;<br>
+      &lt;/disk&gt;<br>
+      &lt;disk type=&#39;file&#39; device=&#39;cdrom&#39;&gt;              #cdrom<br>
+        &lt;driver name=&#39;qemu&#39; type=&#39;raw&#39;/&gt;<br>
+        &lt;source file=&#39;/home/gsdj/win10.iso&#39;/&gt; //光盘镜像路径\\</p>
+<p>&lt;target dev=&#39;hda&#39; bus=&#39;ide&#39;/&gt;<br>
+        &lt;readonly/&gt;<br>
+        &lt;address type=&#39;drive&#39; controller=&#39;0&#39; bus=&#39;0&#39; target=&#39;0&#39;
+  unit=&#39;0&#39;/&gt;<br>
+      &lt;/disk&gt;<br>
+  &lt;graphics type=&#39;vnc&#39; port=&#39;-1&#39; autoport=&#39;yes&#39; listen = &#39;0.0.0.0&#39;
+  keymap=&#39;en-us&#39;/&gt;//vnc方式登录，端口号自动分配，自动加1，可以通过virsh
+  vncdisplay来查询<br>
+   <br>
+  &lt;/devices&gt;<br>
+  &lt;/domain&gt;<br>
+  \\</p>
+</blockquote>
+<p>
+还是没有硬盘。说明，生成一块新的raw格式的空盘 <a href="https://qzc.iteye.com/blog/1820985">https://qzc.iteye.com/blog/1820985</a></p>
+<blockquote>
+<p>#qemu-img create -f raw test_add.img 10G<br>
+#virsh attach-disk test /var/lib/libvirtd/images/test_add.img vdb —cache none<br>
+virsh list –all</p>
+<p>
+  Id   Name    State  <br>
+  ———————\\</p>
+<ul>
+<li>
+<p>win10   关闭   \\</p>
+</li>
+</ul>
+<p>\\</p>
+<p>
+virsh start  win10    //启动虚拟机\\</p>
+<p>
+virsh vncdisplay win10
+  //查看虚拟机的vnc端口， 然后就可以通过vnc登录来完成虚拟机的安装</p>
+<p>
+virsh undefine win10 //删除它。\\</p>
+</blockquote>
+<p>
+挂载真实分区，在qemu-sys  tem-x86_64启动虚拟机的命令里面直接添加参数</p>
+<blockquote>
+<p>-hdb
+  /dev/sda4  //不能使用hda，这个已经被虚拟机的系统盘使用，目前可以使用的是好的hdc
+  hdd，在虚拟机内对应的就是D、E、F盘\\</p>
+</blockquote>
+<p>
+附录：<a href="https://www.jianshu.com/p/3890c45b3645">https://www.jianshu.com/p/3890c45b3645</a></p>
+<p>
+virt-install -n oel1 –ram 512 –vcpus=1 –disk path=/data/vm/oel1/oel1_raw.img,format=raw,size=20,bus=virtio –accelerate –cdrom /data/ios/OracleLinux-R6-U6-Server-x86_64-dvd.iso –vnc –vncport=5910 –vnclisten=0.0.0.0 –network bridge=br0,model=virtio –noautoconsole
+\\
+virsh console centos1 <a href="https://blog.51cto.com/7424593/1735600">https://blog.51cto.com/7424593/1735600</a>\\</p>
+<p>
+*<a href="https://blog.csdn.net/chenmoshashou2/article/details/80622064">https://blog.csdn.net/chenmoshashou2/article/details/80622064</a>\\</p>
+<ul>
+<li>
+</li>
+</ul>
+<p>*定义*：virsh definexxx.xml
+xxx为xml文件所在的路径及文件名称，在当前目录下则不写路径</p>
+<p>
+*启动*：virsh start xyz
+xyz为虚拟机xml配置文件中虚拟机的名字&lt;name&gt;rhel6.2_2&lt;/name&gt;</p>
+<p>
+*停止*：virsh shutdownxyz 此方法为正常关机方法，需要一段才能关机</p>
+<p>
+*下电*：virsh destroy xyz 此方法为暴力下电，虚拟机立即关闭</p>
+<p>
+*删除*：virsh undefinexxx
+关闭了的虚拟机，只是不在运行状态而已，通过virsh undefine
+xxx就能从virsh列表里面（virsh
+list查看当前系统中的虚拟机列表，详见第2.4节）将其删除，undefine命令不会删除镜像文件和xml文件。运行状态的虚拟机是不能删除的。</p>
+<p>
+*临时起虚拟机：*virsh create xxx.xml
+此方法为方便开发调试等临时需求，不会持久化，虚拟机关机后就消失了，不推荐生产系统使用。</p>
+<p>
+*查看VNC端口：*virshvncdisplay xx 查看VNC端口，其中xx可通过virsh
+list查看</p>
+<div id="outline-container-headline-9" class="outline-3">
+<h3 id="headline-9">
+运行qemu并加载磁盘
+</h3>
+<div id="outline-text-headline-9" class="outline-text-3">
+<p>
+qemu-system-x86_64 -kernel /usr/src/linux-4.6.2-x86_64/arch/x86/boot/bzImage -initrd ~/Downloads/initramfs.img ~/Downloads/disk.img -append &#34;console=ttyS0&#34; -nographic </p>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-headline-10" class="outline-2">
+<h2 id="headline-10">
+自用万能启动U盘FBA版2016-12-20 最新增强版
+</h2>
+<div id="outline-text-headline-10" class="outline-text-2">
+<p>
+http://bbs.wuyou.net/forum.php?mod=viewthread&amp;tid=385360</p>
+</div>
+</div>
+<div id="outline-container-headline-11" class="outline-2">
+<h2 id="headline-11">
+一个撒手不管pe
+</h2>
+<div id="outline-text-headline-11" class="outline-text-2">
+<p>
+https://bbs.wuyou.net/forum.php?mod=viewthread&amp;tid=397953&amp;extra=page%3D1</p>
+</div>
+</div>
+
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>

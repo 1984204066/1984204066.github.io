@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <title>emacs-配置帮助 // 不动闲心 の blog</title>
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.89.4" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="John Doe" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="https://1980204066.github.io.git/css/main.min.4a7ec8660f9a44b08c4da97c5f2e31b1192df1d4d0322e65c0dbbc6ecb1b863f.css" />
+
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="emacs-配置帮助"/>
+<meta name="twitter:description" content="Table of Contents  Key Bind Commands global-set-key 干了什么 绑定中文命令 Custom Prefixes Emacs中`global-set-key`和`define-key global-map`有什么区别 使用add-hook给指定的主模式绑定按键 使用define-key给指定的模式绑定按键 M-x global-set-key RET 交互式的绑定你的键 Duplicating prefix keys 如何把find-file绑定到M-o emacs使用ggtags my dot emacs Emacs M$ 系统下特别慢  Key Bind Commands There are several ways you can define (or undefine) keys, as the table below shows, but in reality there are dozens of ways you can hack the keymaps.
+(define-key KEYMAP KEY DEF)
+Defines a key against a keyboard map."/>
+
+    <meta property="og:title" content="emacs-配置帮助" />
+<meta property="og:description" content="Table of Contents  Key Bind Commands global-set-key 干了什么 绑定中文命令 Custom Prefixes Emacs中`global-set-key`和`define-key global-map`有什么区别 使用add-hook给指定的主模式绑定按键 使用define-key给指定的模式绑定按键 M-x global-set-key RET 交互式的绑定你的键 Duplicating prefix keys 如何把find-file绑定到M-o emacs使用ggtags my dot emacs Emacs M$ 系统下特别慢  Key Bind Commands There are several ways you can define (or undefine) keys, as the table below shows, but in reality there are dozens of ways you can hack the keymaps.
+(define-key KEYMAP KEY DEF)
+Defines a key against a keyboard map." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://1980204066.github.io.git/2019/08/11/emacs-%E9%85%8D%E7%BD%AE%E5%B8%AE%E5%8A%A9/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2019-08-11T00:00:00+00:00" />
+<meta property="article:modified_time" content="2019-08-11T00:00:00+00:00" />
+
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://1980204066.github.io.git"><img class="app-header-avatar" src="/avatar.jpg" alt="John Doe" /></a>
+      <h1>不动闲心 の blog</h1>
+      <nav class="app-header-menu">
+          <a class="app-header-menu-item" href="/tags/">Tags</a>
+      </nav>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vehicula turpis sit amet elit pretium.</p>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">emacs-配置帮助</h1>
+      <div class="post-meta">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          Aug 11, 2019
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          5 min read
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tag">
+  <title>tag</title>
+  <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line>
+</svg>
+              <a class="tag" href="https://1980204066.github.io.git/tags/it/">it</a>
+        </div>
+      </div>
+    </header>
+    <div class="post-content">
+      <h1 id="table-of-contents">Table of Contents</h1>
+<ol>
+<li><a href="#orgaa99ee8">Key Bind Commands</a></li>
+<li><a href="#orga1097f1">global-set-key 干了什么</a></li>
+<li><a href="#org0cd822f">绑定中文命令</a></li>
+<li><a href="#org1bc83e6">Custom Prefixes</a></li>
+<li><a href="#org03991d9">Emacs中`global-set-key`和`define-key global-map`有什么区别</a></li>
+<li><a href="#org155e282">使用add-hook给指定的主模式绑定按键</a></li>
+<li><a href="#orgf4b86e1">使用define-key给指定的模式绑定按键</a></li>
+<li><a href="#org1981d62">M-x global-set-key RET 交互式的绑定你的键</a></li>
+<li><a href="#orgf27286e">Duplicating prefix keys</a></li>
+<li><a href="#org076edf6">如何把find-file绑定到M-o</a></li>
+<li><a href="#org8edd1a7">emacs使用ggtags</a></li>
+<li><a href="#org300f7e4">my dot emacs</a></li>
+<li><a href="#org4df596a">Emacs M$ 系统下特别慢</a></li>
+</ol>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<h1 id="key-bind-commandshttpswwwmasteringemacsorgarticlemastering-key-bindings-emacs"><a href="https://www.masteringemacs.org/article/mastering-key-bindings-emacs">Key Bind Commands</a></h1>
+<p>There are several ways you can define (or undefine) keys, as the table
+below shows, but in reality there are dozens of ways you can hack the
+keymaps.</p>
+<p>(define-key KEYMAP KEY DEF)</p>
+<p>Defines a key against a keyboard map. Use this if you want to change a
+keymap that isn&rsquo;t the current buffer map.</p>
+<p>(local-set-key KEY COMMAND)</p>
+<p>Binds a key to the local keymap used by the active buffer, unlike
+define-key which takes an explicit keymap to bind a key against.</p>
+<p>(global-set-key KEY COMMAND)</p>
+<p>Binds a key to the global keymap, making it available in all buffers
+(with a caveat – see below.)</p>
+<p>(global-unset-key KEY)</p>
+<p>Removes KEY from the global keymap</p>
+<p>(local-unset-key KEY)</p>
+<p>Removes KEY from the active, local keymap.</p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<h1 id="global-set-key-干了什么httpsblogcsdnnetrodneyzhaonetarticledetails44004549"><a href="https://blog.csdn.net/rodneyzhaonet/article/details/44004549">global-set-key 干了什么</a></h1>
+<p>很多人绑定一些比较特殊的键的时候，都搞不清楚在</p>
+<p>(global-set-key … &lsquo;my-funtion)</p>
+<p>里写些什么。特别是在 xterm 里的时候就更不知所措了。其实有一个万无一失的办法保证你一定写对。这个办法就是：</p>
+<p>M-x global-set-key RET 交互式的绑定你的键。<br>
+C-x Esc Esc 调出上一条”复杂命令”。</p>
+<p>好了，你现在就能在 minibuffer 里看到你应该写在 .emacs 的东西了。 如果你还是失败了……</p>
+<p>如果你在第1步的时候发现 Emacs 根本对你的按键没有反应，那么应该怀疑是你的窗口管理器拦截了这个按键。比如，我的 FVWM 设置把 C-f3 设定成了打开一个 FvwmCommand, 所以Emacs 接收不到这个按键。如果我要绑定一个函数到 C-f3, 我必须让 FVWM 放过 C-f3。 绑定新的前缀键</p>
+<p>其实上面的办法只能让你绑定一个已有的前缀。你有可能想绑定一个 save-buffer
+到 &ldquo;C-c C-w C-b a&rdquo;。上面的办法就不灵了。我们必须使用另外的办法：</p>
+<pre><code>(global-set-key (kbd &quot;C-c C-w C-b a&quot;) 'save-buffer) 
+</code></pre>
+<p>一点解释:<br>
+C-c是一个已有的前缀<br>
+上面的那个 &ldquo;C-c C-w C-b a&rdquo; 是自动把 &ldquo;C-c C-w&rdquo;, &ldquo;C-c C-w C-b&rdquo; 都定义成了一个 prefix-command. 你可以这样看到它们：</p>
+<blockquote>
+<p>C-h C-b 显示绑定
+C-x o 切换到显示绑定的窗口
+C-x C-q 消除这个窗口的只读属性
+M-x delete-non-matching-lines RET prefix RET 删除所有不含&quot;prefix&quot; 字样的行。</p>
+</blockquote>
+<p>现在你清楚的看到了 &ldquo;C-c C-w&rdquo;, &ldquo;C-c C-w C-b&rdquo; 都是 prefixcommand 吧？</p>
+<p>上面这个办法只对开头的键已经是 prefix command 的键序列起作用，如果你的第一个键不是一个 prefix，那么就会出错。你可以试试：</p>
+<pre><code>(global-set-key (kbd &quot;C-z C-c C-w b&quot;) 'find-file)
+</code></pre>
+<p>出现错误：(error &ldquo;Key sequence C-z C-c C-w b uses invalid prefix characters&rdquo;)</p>
+<p>所以你必须事先把第一个键设定为 prefix:</p>
+<pre><code>(define-prefix-command 'ctl-z-map)
+(global-set-key (kbd &quot;C-z&quot;) 'ctl-z-map)
+</code></pre>
+<p>然后再用</p>
+<pre><code>(global-set-key (kbd &quot;C-z C-c C-w b&quot;) 'find-file)
+</code></pre>
+<p>就行了。&ldquo;C-z C-c&rdquo; 和 &ldquo;C-z C-c C-w&rdquo; 都会自动被定义为 prefixcommand.</p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<h1 id="绑定中文命令httpsblogcsdnnetrodneyzhaonetarticledetails44004549"><a href="https://blog.csdn.net/rodneyzhaonet/article/details/44004549">绑定中文命令</a></h1>
+<p>现在我举一个例子来说明 prefix command 是如何工作的。我们可以把中文的 存盘 两个字绑定到save-buffer. 这样你用中文输入法敲入”存盘”两个字时，就可以把当前 buffer 保存起来。</p>
+<pre><code>(define-prefix-command '存-map)
+(global-set-key (kbd &quot;存&quot;) '存-map)
+(define-key 存-map (kbd &quot;盘&quot;) 'save-buffer)
+</code></pre>
+<p>有趣吧？你可以猜到这里面是怎么回事吧？太简单了是不是？当你输入”存”的时候，看到
+minibuffer 是这样：</p>
+<p><img src="https://docs.huihoo.com/homepage/shredderyin/images/bind-cun.png" alt="img"></p>
+<p>这是因为我们把”存”这个字绑定到了 存-map 这个prefix-command. 当读到”存”的时候，Emacs 就会等待下一条命令，这个命令是定义在 存-map 这个 map 里的。它读到”盘”，就会执行 save-buffer 了。</p>
+<p>不过注意，你真的要在文档里输入”存盘”两个字就得先打 C-q 了。刚才我就打了好多次 C-q，真累啊。还是用一些不常用的词组比较好，或者加一个 ctrl 什么的前缀，就像这个，&ldquo;C-z 存盘&rdquo;。</p>
+<pre><code>(define-prefix-command 'ctl-z-map)
+(global-set-key (kbd &quot;C-z&quot;) 'ctl-z-map)
+(define-key ctl-z-map (kbd &quot;存盘&quot;) 'save-buffer)
+</code></pre>
+<p>define-key 会自动建立很多 prefix command. 不过自己显式用 define-prefix-command 定义前缀命令有一个好处，就是你可以在你的 prefix 里再方便的定义更多的命令，而不用把整个前缀都写一遍。</p>
+<pre><code>(define-prefix-command 'ctl-z-map)
+(define-prefix-command '存-map)
+(define-prefix-command '盘-map)
+
+(global-set-key (kbd &quot;C-z&quot;) 'ctl-z-map)
+(define-key ctl-z-map (kbd &quot;存&quot;) '存-map)
+(define-key 存-map (kbd &quot;盘&quot;) '盘-map)
+
+(define-key 盘-map (kbd &quot;！&quot;) 'save-buffer)
+(define-key 盘-map (kbd &quot;到&quot;) 'write-file)
+(define-key 盘-map (kbd &quot;退出&quot;) (lambda () (interactive) (save-buffer) (kill-emacs)))
+</code></pre>
+<p>这样，到了”C-z 存盘-“ 这个时候，我们定义了3个分支：</p>
+<blockquote>
+<p>&ldquo;C-z 存盘！&quot;，表示保存这个文件；
+&ldquo;C-z 存盘到&rdquo;，表示保存到另一个文件；
+&ldquo;C-z 存盘退出&rdquo;，这个不用解释了吧。</p>
+</blockquote>
+<p>自定义 prefix command 的另外一个更大的好处就是：你可以修改最上层对 prefix command 的绑定，从而修改许多键的绑定。比如，我们可以把 &ldquo;存盘&rdquo; 轻而易举的改成 &ldquo;保存&rdquo;：</p>
+<p>(define-key ctl-z-map (kbd &ldquo;保存&rdquo;) &lsquo;盘-map)</p>
+<p>这样一来， &ldquo;C-z 保存！&rdquo; ，&ldquo;C-z 保存到&rdquo; ， &ldquo;C-z 保存退出&quot;就分别有了 &ldquo;C-z 存盘！&rdquo; ， &ldquo;C-z 存盘到&rdquo; 和 &ldquo;C-z 存盘退出&rdquo; 的含义了。</p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<h1 id="custom-prefixeshttpswwwmasteringemacsorgarticlemastering-key-bindings-emacs"><a href="https://www.masteringemacs.org/article/mastering-key-bindings-emacs">Custom Prefixes</a></h1>
+<p>Purpose</p>
+<p>Creating a prefix is easy nowadays as you don&rsquo;t have to explicitly
+create your own prefix keymaps, provided you use local-set-key or
+global-set-key. Use custom prefixes to group or categorize your
+commands.</p>
+<p>Definition(global-set-key (kbd &ldquo;subkey<!-- raw HTML omitted -->1<!-- raw HTML omitted --> …
+endkey<!-- raw HTML omitted -->1<!-- raw HTML omitted -->&quot;) &lsquo;my-command-1)(global-set-key (kbd &ldquo;subkey<!-- raw HTML omitted -->1<!-- raw HTML omitted --> …
+endkey<!-- raw HTML omitted -->2<!-- raw HTML omitted -->&quot;) &lsquo;my-command-2)Example</p>
+<p>Global keys that will insert either the time of the day, or the current
+date. Type C-c i d to insert the date; and C-c i t to insert the time.
+Type C-c i C-h to list all bound keys under the C-c i prefix.</p>
+<p>(defun mp-insert-date
+()  (interactive)  (insert (format-time-string &ldquo;%x&rdquo;)))(defun
+mp-insert-time
+()  (interactive)  (insert (format-time-string &ldquo;%X&rdquo;)))(global-set-key (kbd &ldquo;C-c
+i d&rdquo;) &lsquo;mp-insert-date)(global-set-key (kbd &ldquo;C-c i t&rdquo;) &lsquo;mp-insert-time)</p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<h1 id="emacs中global-set-key和define-key-global-map有什么区别">Emacs中`global-set-key`和`define-key global-map`有什么区别</h1>
+<p>global-set-key在subr.el中定义为：(define-key (current-global-map) key command))</p>
+<p>global-set-key是基于define-key的交互式功能</p>
+<p><a href="https://www.jianshu.com/p/07996a1af7b0">https://www.jianshu.com/p/07996a1af7b0</a></p>
+<p>按键绑定的可见范围分类</p>
+<p>全局绑定 &gt; 主模式（major-mode）绑定 &gt; 副模式（minor-mode）绑定 &gt; 局部绑定（在某个缓冲区中通过执行&quot;M-x&quot;所做的绑定）</p>
+<p>在更小可见范围中定义的按键绑定将会覆盖掉在更大可见范围内已经定义的相同按键的绑定。</p>
+<p>查看某个按键（序列）和哪些函数进行了绑定</p>
+<p>C-h c [按键序列]</p>
+<p>查看某个函数和哪些按键（序列）进行了绑定</p>
+<p>C-h w [函数名] <!-- raw HTML omitted --></p>
+<p>使用global-set-key和kbd给函数绑定全局按键</p>
+<p>常用用法如下：</p>
+<pre><code>(global-set-key (kbd&quot;C-z&quot;) 'shell) ;; 将shell函数绑定到按键&quot;C-z&quot;上
+(global-set-key (kbd&quot;C-c y&quot;) 'clipboard-yank) ;; 将clipboard-yank函数绑定到按键&quot;C-c y上&quot;
+(global-set-key (kbd&quot;C-M-q&quot;) 'query-replace)
+(global-set-key (kbd&quot;&lt;f5&gt;&quot;) 'flyspell-mode)
+(global-set-key (kbd&quot;C-&lt;f5&gt;&quot;) 'linum-mode)
+(global-set-key (kbd&quot;C-&lt;right&gt;&quot;) 'forward-sentence)
+</code></pre>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<h1 id="使用add-hook给指定的主模式绑定按键">使用add-hook给指定的主模式绑定按键</h1>
+<p>使用add-hook可以对指定的主模式进行按键绑定，而不影响其他模式。大部分的主模式都定义了自己的至少一个hook，用法示例：
+;;
+仅在org-mode模式改变&quot;C-z&quot;的按键绑定，将其绑定为打开shell命令行的&quot;shell&quot;函数，
+注意这里要使用local-set-key</p>
+<pre><code>(add-hook 'org-mode-hook      (lambda ()        (local-set-key (kbd&quot;C-z&quot;) 'shell))) 
+</code></pre>
+<p>注：</p>
+<ol>
+<li>给主模式绑定快捷键后，要重启主模式才能生效（kill掉对应的buffer然后重新打开）</li>
+<li>查看当前emacs中的所有已定义的hook：M-x apropos-variable <!-- raw HTML omitted --> -hook <!-- raw HTML omitted --></li>
+</ol>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<h1 id="使用define-key给指定的模式绑定按键">使用define-key给指定的模式绑定按键</h1>
+<p>使用define-key函数也可以给指定的模式绑定快捷键，前提是这个模式定义了按键map，所以第一件事就是要找到这个模式所定义的按键map。</p>
+<p>以org-mode为例，怎么知道这个模式所定义的按键map是什么呢？非常简单，C-h f <!-- raw HTML omitted --> org-mode <!-- raw HTML omitted -->查看org-mode的帮助文档，就会出现org-mode代码所在的el文件，进入这个文件，搜索：-map，就会找到org-mode-map这个变量。</p>
+<p>然后使用define-key来为org-mode定义一个简单的按键绑定，如下：</p>
+<pre><code>(defun my-org-func ()
+  (interactive)
+  (message&quot;hello, org!&quot;))
+(define-key org-mode-map (kbd&quot;C-c d&quot;) 'my-org-func) 
+</code></pre>
+<p>加载上述代码后，在org-mode中按C-c d快捷键，就会执行my-org-func函数，显示出来一个字符串：hello, org!</p>
+<p><a href="https://jixiuf.github.io/blog/00005-emacs-keybind.html/">https://jixiuf.github.io/blog/00005-emacs-keybind.html/</a></p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<h1 id="m-x-global-set-key-ret-交互式的绑定你的键">M-x global-set-key RET 交互式的绑定你的键</h1>
+<p>比如 我想绑定 Alt-Return 到 forward-char 这个命令 M-x:global-set-key RET
+然后 按下 Alt-Return 按键 ，然后输入forward-char 然后回来 再然后 按下
+C-x Esc Esc 就会在minibuffer 里显示出</p>
+<pre><code>(global-set-key [27 13] (quote forward-char)) 
+</code></pre>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<h1 id="duplicating-prefix-keyshttpswwwemacswikiorgemacsprefixkey"><a href="https://www.emacswiki.org/emacs/PrefixKey">Duplicating prefix keys</a></h1>
+<p>Since I&rsquo;m a Windows user and use CUA, I copy C-x functionality onto the
+<!-- raw HTML omitted --> key. This way I can reach C-x prefixed functions
+consistantly even when I&rsquo;ve  got text selected. The same technique could
+copy them to just about any other  available key.</p>
+<p>(global-set-key (kbd &ldquo;<!-- raw HTML omitted -->&quot;) (lookup-key global-map
+(kbd &ldquo;C-x&rdquo;)))</p>
+<p><strong>NOTE</strong> This only copies the PREFIX KEY not any followup key. Meaning the
+C-x C-x function can now be reached using <!-- raw HTML omitted --> C-x  but unless
+C-x <!-- raw HTML omitted --> is mapped to something, <!-- raw HTML omitted --> <!-- raw HTML omitted --> won&rsquo;t be
+either.</p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<h1 id="如何把find-file绑定到m-o">如何把find-file绑定到M-o</h1>
+<p><a href="https://www.cnblogs.com/yjie/p/4059145.html">
+一些有用的 Emacs 配置（窗口快速切换、一键透明效果、任意位置删除整行等）</a>  </p>
+<p>上文提到的 （emacs操作 global-set-key）</p>
+<blockquote>
+<p>以org-mode为例，怎么知道这个模式所定义的按键map是什么呢？非常简单，C-h f <!-- raw HTML omitted --> org-mode <!-- raw HTML omitted -->查看org-mode的帮助文档，就会出现org-mode代码所在的el文件，进入这个文件，搜索：-map，就会找到org-mode-map这个变量。</p>
+</blockquote>
+<p>或者</p>
+<p>C-x C-q 取消buffer的只读性质。 然后粘贴输入</p>
+<pre><code>(lookup-key global-map (kbd &quot;M-o&quot;)) ;; 用C-x C-e 执行这一行。
+</code></pre>
+<blockquote>
+<p>facemenu-keymap</p>
+</blockquote>
+<pre><code>(local-unset-key (kbd &quot;C-x p&quot;))
+(define-key global-map &quot;M-o&quot; nil)
+</code></pre>
+<p>^上面是错的。 直接就行。</p>
+<pre><code>;;(global-unset-key (kbd &quot;M-o&quot;))
+(global-set-key (kbd &quot;M-o&quot;) 'find-file)
+</code></pre>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<h1 id="emacs使用ggtagshttpsblogcsdnnetu010164190articledetails79520054"><a href="https://blog.csdn.net/u010164190/article/details/79520054">emacs使用ggtags</a></h1>
+<p><a href="https://www.jianshu.com/p/652b384589cf">global, ggtags</a></p>
+<p>执行 gtags 命令。可以看到生成了3个文件：GPATH, GRTAGS, GTAGS。执行 ls
+-alh命令，查看生成的文件大小.</p>
+<p><a href="https://www.cnblogs.com/instinct-em/p/10628709.html">https://www.cnblogs.com/instinct-em/p/10628709.html</a></p>
+<p><a href="https://www.newsmth.net/nForum/#!article/Emacs/63629">https://www.newsmth.net/nForum/#!article/Emacs/63629</a></p>
+<p>看到很多人在讨论 ecb,
+etags, … ，后来发现其实不是很好用.最近我发现一个东西叫 GNU Global</p>
+<p>如果使用cygwin，则解压global的zip包到/usr/local下边。如果不用cygwin的话，只要复制global中bin目录的内容到系统路径就可以了，比如c:/windows，不过这样就无法方便的阅读manual了。</p>
+<p><a href="https://www.gnu.org/software/global/download.html">https://www.gnu.org/software/global/download.html</a></p>
+<p>解压出来，相应路径放到windows的PATH里面。让终端可执行global</p>
+<p>让emacs缺省使用ggtags, 而不是etags.</p>
+<pre><code>(ggtags-mode 1) ;;要hook到c-common-hook中才能生效，好像。
+(use-package ggtags :config (ggtags-mode 1)) ;;好像没啥用, 必须加到 c-mode-common-hook里
+
+;; https://tuhdo.github.io/c-ide.html
+(use-package ggtags
+  :bind (:map ggtags-mode-map 
+	      (&quot;C-c g s&quot; . 'ggtags-find-other-symbol)
+	      (&quot;C-c g h&quot; . 'ggtags-view-tag-history)
+	      (&quot;C-c g r&quot; . 'ggtags-find-reference)
+	      (&quot;C-c g f&quot; . 'ggtags-find-file) 
+	      (&quot;C-c g c&quot; . 'ggtags-create-tags)
+	      (&quot;C-c g u&quot; . 'ggtags-update-tags))
+  :config ;;
+  (ggtags-mode 1) ;;好像没啥用, 必须加到 c-mode-common-hook里面
+  (add-hook 'c-mode-common-hook
+	    (lambda () (when (derived-mode-p 'c-mode 'c++-mode 'java-mode 'asm-mode) (ggtags-mode 1)))))
+</code></pre>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<h1 id="my-dot-emacs">my dot emacs</h1>
+<p><a href="https://github.com/1984204066/dotemacs">my github上的有待完善配置</a></p>
+<p>refs:
+设置一次跳跃 n 行的快捷键 <a href="https://www.cnblogs.com/instinct-em/p/10628709.html">emacs的新配置</a></p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<h1 id="emacs-m系统下特别慢httpswwwjianshucompcc6379e43992"><a href="https://www.jianshu.com/p/cc6379e43992">Emacs M$ 系统下特别慢</a></h1>
+<p>打开Emacs，点击菜单栏的Options，使用Set Default Font 。 把原来的Courier New 改成黑体（个人比较喜欢黑体，当然你也可以设为其他字体，只要不再出现卡顿的情况就可以了）。 保存后，Emacs就不会再卡顿了。</p>
+
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>

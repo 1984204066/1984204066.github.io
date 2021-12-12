@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>随笔 on 不动闲心 の blog</title>
+    <link>https://1980204066.github.io.git/tags/%E9%9A%8F%E7%AC%94/</link>
+    <description>Recent content in 随笔 on 不动闲心 の blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 01 Dec 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://1980204066.github.io.git/tags/%E9%9A%8F%E7%AC%94/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Here I come</title>
+      <link>https://1980204066.github.io.git/2021/12/01/comming/</link>
+      <pubDate>Wed, 01 Dec 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://1980204066.github.io.git/2021/12/01/comming/</guid>
+      <description>I&amp;rsquo;m coming 写博客还是要用gitbub之类.
+github, gitee强调了版本管理，所有的文章都有本地备份。
+其他的都是说封就封，连导出文件都不允许，都是霸王条款，说理都没地方说.
+[学法] 异类的leisure, 于声色犬马之处，占一片地，坐着。
+ADDHA IMAYA PATIPADAYA JARAMARANANHA PARIMUCCISSAMI
+以此修习，愿我超越衰败及死亡。
+SADHU,SADHU,SADHU</description>
+    </item>
+    
+    <item>
+      <title>深刻理解Reactor和Proactor</title>
+      <link>https://1980204066.github.io.git/2020/12/30/%E6%B7%B1%E5%88%BB%E7%90%86%E8%A7%A3Reactor%E5%92%8CProactor/</link>
+      <pubDate>Wed, 30 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://1980204066.github.io.git/2020/12/30/%E6%B7%B1%E5%88%BB%E7%90%86%E8%A7%A3Reactor%E5%92%8CProactor/</guid>
+      <description>反应器Reactor
+  主动器Proactor
+  https://www.cnblogs.com/me115/p/4452801.html
+说白了 Reactor 就是民工等干活模式。
+Proactor就是老板吩咐干活模式。</description>
+    </item>
+    
+    <item>
+      <title>99天通关轻BT地图次元门</title>
+      <link>https://1980204066.github.io.git/2018/03/11/99%E5%A4%A9%E9%80%9A%E5%85%B3%E8%BD%BBBT%E5%9C%B0%E5%9B%BE%E6%AC%A1%E5%85%83%E9%97%A8/</link>
+      <pubDate>Sun, 11 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://1980204066.github.io.git/2018/03/11/99%E5%A4%A9%E9%80%9A%E5%85%B3%E8%BD%BBBT%E5%9C%B0%E5%9B%BE%E6%AC%A1%E5%85%83%E9%97%A8/</guid>
+      <description>https://tieba.baidu.com/p/4022852262?pn=11
+访问蓝色帐篷触发事件，是要先灭巨龙之后？或者天数限制。98天触发剧情，建起斗士碑！https://tieba.baidu.com/p/4022852262?pn=12
+打仙女龙用抗魔，土系魔法书里的，没用过。我用1条黑龙+力盾+末日魔法慢慢耗，用了1000多魔法值。
+打气，水，火都是用黑龙+末日魔法+逃跑慢慢耗过来的，惨。
+苦难之狱进不去，估计没影响。
+去时空之城的路上有龙伏兵，没想到应该跳过去，硬打下来的。
+21个月4周6天。最后还是靠捡到4000天使打下时空之城，电脑也大发慈悲还让我捡了2000多宝石龙。但是没有神器啊，过不了关。
+我的地图3月后被人挖走了333，load前面的进度的确可以找到神器。当初战争枷锁不换枯木的话应该还能找回来。</description>
+    </item>
+    
+    <item>
+      <title>Lophis</title>
+      <link>https://1980204066.github.io.git/2016/03/11/lophis/</link>
+      <pubDate>Fri, 11 Mar 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://1980204066.github.io.git/2016/03/11/lophis/</guid>
+      <description>http://www.ucbug.com/sygl/133539.html
+\
+前言
+之前玩月圆之夜玩的挺high的，最近又找到了个与月圆之夜类似的卡牌游戏，游戏名为Lophis roguelike，中文翻译名洛菲斯的呼唤手游。
+但是这个与月圆之夜有所不同，如果失败了，只能从开头重新开始打，可以复活，但是需要灵魂点，灵魂点只能通过购买获得，然后它里面的购买是通过谷歌购买的，所以无法购买，我需要灵魂点，这可怎么破呢?
+破解思路&amp;quot;&amp;gt;破解思路
+首先查看了一下游戏类型，按照我之前的那一篇帖子，可以发现，这款游戏是采用了mono方式的Unity3d游戏，nice，可以开始我们的... :::
+::: {.txt .js-630307 style=&amp;ldquo;display: block;&amp;quot;} https://www.ucbug.com/sygl/133539.html
+\
+前言
+之前玩月圆之夜玩的挺high的，最近又找到了个与月圆之夜类似的卡牌游戏，游戏名为Lophis roguelike，中文翻译名洛菲斯的呼唤手游。
+但是这个与月圆之夜有所不同，如果失败了，只能从开头重新开始打，可以复活，但是需要灵魂点，灵魂点只能通过购买获得，然后它里面的购买是通过谷歌购买的，所以无法购买，我需要灵魂点，这可怎么破呢?
+破解思路&amp;quot;&amp;gt;破解思路
+首先查看了一下游戏类型，按照我之前的那一篇帖子，可以发现，这款游戏是采用了mono方式的Unity3d游戏，nice，可以开始我们的工作了。
+目的
+破解之前， 先明确一下我们破解要达到的目的。
+1. 去除签名验证
+2. 去除谷歌服务的提示框
+3. 通过dll破解修改灵魂点
+去除签名验证
+把原版的丢到Androidkiller中，什么都不做，之后再次生成apk，安装打开发现进不去，然后闪退，弹出了一个选择应用市场的的对话框。
+我猜测应该是有个签名验证，它发现这个游戏不是原版的游戏，就直接退出游戏，让我们到应用市场下载正版的游戏
+我们通过一款工具即可去除签名验证(也就是MT管理器作者开发的工具)ApkSignatureKiller
+具体说明进入上面的网页就可以看到，这里不多说，唯一注意的是，工具需要的环境是java1.8
+去除签名验证之后，安装之后，发现可以正常打开了，我们就可以进行下面的操作。
+去除谷歌服务的提示框
+打开游戏，由于未安装有谷歌服务，就会弹出一个提示框，感觉每次都要点击，很麻烦，就把这个提示框去掉吧
+通过百度，了解到了，一般开发者都是通过GoogleApiAvailability类的getErrorDialog()这个方法从而弹出官方提供的对话框
+我们直接在Androidkiller中直接搜索这个getErrorDialog方法，之后找到GoogleApiAvailability，这个就是我们要找的。
+{style=&amp;ldquo;max-width:500px;&amp;quot;}
+直接进去返回void,也就是在方法开始之前添加这行代码return-void
+需要注意的是，由于参数不同，可能存在有多个getErrorDialog方法，我们也不必纠结，全部修改retun-void
+{style=&amp;ldquo;max-width:500px;&amp;quot;}
+修改灵魂点
+直接使用dnspy工具打开dll文件，搜索soul(因为游戏有英文版本，我们就可以通过提示来获得道具的名称)
+{style=&amp;ldquo;max-width:500px;&amp;quot;}
+上图中的第二个就是我们需要的，进去就可以找到一些修改soul的方法
+{style=&amp;ldquo;max-width:500px;&amp;quot;}
+不过修改之后，我发现没有效果，那就继续改其他的方法。
+{style=&amp;ldquo;max-width:500px;&amp;quot;}
+嗯，发现成功了，而且，这里由于是固定返回，所以不管每次使用了多少，一直都是5000灵魂石，哈哈
+测试结果
+{style=&amp;ldquo;max-width:500px;&amp;quot;}
+{style=&amp;ldquo;max-width:500px;&amp;quot;}</description>
+    </item>
+    
+    <item>
+      <title>太阳能控制器</title>
+      <link>https://1980204066.github.io.git/2016/03/11/sun-energy/</link>
+      <pubDate>Fri, 11 Mar 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://1980204066.github.io.git/2016/03/11/sun-energy/</guid>
+      <description>太阳能控制器50A60A 离网光伏发电控制器 48V50A60A光伏发电站 --480  https://item.taobao.com/item.htm?spm=2013.1.20141002.4.19bb5f99eEYRMs&amp;amp;scm=1007.10009.70205.100200300000001&amp;amp;id=542103260420&amp;amp;pvid=f22d72d4-67fc-4dc1-9498-bd55c39d5159
+  全新足瓦200W单晶光伏板组件太阳能发电板可充12V\24V蓄电池 -- 445
+https://item.taobao.com/item.htm?id=563298867032&amp;amp;ali_refid=a3_430673_1006:1110023626:N:%E5%8D%95%E6%99%B6%E5%A4%AA%E9%98%B3%E8%83%BD%E6%9D%BF:0c79591f7bd3630acc0fac1ef0232b7d&amp;amp;ali_trackid=1_0c79591f7bd3630acc0fac1ef0232b7d&amp;amp;spm=a2e15.8261149.07626516002.7
+  大功率逆变器。 -- 280
+https://detail.tmall.com/item.htm?id=544321422989&amp;amp;ali_refid=a3_430673_1006:1109595610:N:逆变器:1c680bf464266b52b18ad9a206cf3a9d&amp;amp;ali_trackid=1_1c680bf464266b52b18ad9a206cf3a9d&amp;amp;spm=a2e15.8261149.07626516002.1&amp;amp;skuId=3282417348846
+https://item.taobao.com/item.htm?id=526285555895&amp;amp;ali_refid=a3_430673_1006:1104275971:N:%E9%80%86%E5%8F%98%E5%99%A8+12v%E8%BD%AC220v:0a47c4b2818a57292d93ff4dd6ab6c45&amp;amp;ali_trackid=1_0a47c4b2818a57292d93ff4dd6ab6c45&amp;amp;spm=a2e15.8261149.07626516002.26
+  \
+  双登蓄电池6-GFM-200 双登12V200Ah直流屏UPS/EPS免维护蓄电池 -- 1250
+  https://item.taobao.com/item.htm?id=528248081947&amp;amp;ali_refid=a3_430673_1006:1122977470:N:%E5%A4%AA%E9%98%B3%E8%83%BD%E8%93%84%E7%94%B5%E6%B1%A012v200ah:2d921ee060b7113a709482162f27e7ba&amp;amp;ali_trackid=1_2d921ee060b7113a709482162f27e7ba&amp;amp;spm=a2e15.8261149.07626516002.19
+ 3000瓦太阳能的配置  https://zhidao.baidu.com/question/574929883.html?fr=iks&amp;amp;word=3000w+%CC%AB%D1%F4%C4%DC%B0%E5+%D0%EE%B5%E7%B3%D8+%BF%D8%D6%C6%C6%F7&amp;amp;ie=gbk
+按照每天10度电的用电标准，根据你们当地的峰值日照，大概需要2400W的系统才能满足要求。
+其中主要配件及规格如下：
+太阳能板：240W，10块
+蓄电池：12V150Ah,8个
+控制器：48V50A，1台
+逆变器：3000W，1台
+光伏支架：1套
+电缆：1套
+交直流配电柜：1台
+总成本约3万5左右
+\
+ 清华大学戴兴建：飞轮储能技术发展历程50年评述  https://www.escn.com.cn/news/show-419010.html
+ 电池新方向&amp;quot;飞轮储能&amp;quot;  https://blog.sina.com.cn/s/blog_7cb1cf6a0100pyzn.html
+ 飞轮储能 -- 英利集团  https://www.360doc.com/content/17/0314/22/1204156_636909252.shtml
+ 北京百富丽科技有限  https://www.bjbalfour.com/index.php/Home/Index/product/cid/7
+北京百富丽科技有限公司成立于2007年，是美国VYCON Flywheel飞轮储能系统和德国尖锐Generex蓄电池监控系统和德国Gustav Klein电源系统公司的中国区唯一销售和技术服务代表。
+ 创酷网： 有一个鸡腿手柄。  https://chuangkoo.</description>
+    </item>
+    
+  </channel>
+</rss>

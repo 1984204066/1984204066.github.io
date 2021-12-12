@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <title>C&#43;&#43;14的returntypededuction&amp; // 不动闲心 の blog</title>
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.89.4" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="John Doe" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="https://1980204066.github.io.git/css/main.min.4a7ec8660f9a44b08c4da97c5f2e31b1192df1d4d0322e65c0dbbc6ecb1b863f.css" />
+
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="C&#43;&#43;14的returntypededuction&amp;"/>
+<meta name="twitter:description" content="https://www.newsmth.net/nForum/#!article/CPlusPlus/374960
+若干年前实现了一个 C&#43;&#43; 序列化库，以前一直纠结于一种优化无法（自动）实现： struct A { int a1, a2; }; struct B { int b1, b2; }; struct C { A ca; B cb; }; struct D { std::set d; }; DATA_IO_LOAD_SAVE_E(A, &amp;a1 &amp;a2) // 序列化 A 的 a1, a2 成员，下同 DATA_IO_LOAD_SAVE_E(B, &amp;b1 &amp;b2) DATA_IO_LOAD_SAVE_E(C, &amp;ca &amp;cb) DATA_IO_LOAD_SAVE_E(D, &amp;d) // stl 容器也可以序列化  如果使用 NativeDataInput/Output, 只能自动推断出 A, B 可以直接 memcpy，无法推断出 C 也可以 memcpy，当然，任何情况下 D 肯定都是 无法 memcpy 的  现在有了 return type deduction, C memcpy 的问题就解决了  参考链接： https://www."/>
+
+    <meta property="og:title" content="C&#43;&#43;14的returntypededuction&amp;" />
+<meta property="og:description" content="https://www.newsmth.net/nForum/#!article/CPlusPlus/374960
+若干年前实现了一个 C&#43;&#43; 序列化库，以前一直纠结于一种优化无法（自动）实现： struct A { int a1, a2; }; struct B { int b1, b2; }; struct C { A ca; B cb; }; struct D { std::set d; }; DATA_IO_LOAD_SAVE_E(A, &amp;a1 &amp;a2) // 序列化 A 的 a1, a2 成员，下同 DATA_IO_LOAD_SAVE_E(B, &amp;b1 &amp;b2) DATA_IO_LOAD_SAVE_E(C, &amp;ca &amp;cb) DATA_IO_LOAD_SAVE_E(D, &amp;d) // stl 容器也可以序列化  如果使用 NativeDataInput/Output, 只能自动推断出 A, B 可以直接 memcpy，无法推断出 C 也可以 memcpy，当然，任何情况下 D 肯定都是 无法 memcpy 的  现在有了 return type deduction, C memcpy 的问题就解决了  参考链接： https://www." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://1980204066.github.io.git/2015/01/26/C&#43;&#43;14%E7%9A%84returntypededuction&amp;/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2015-01-26T00:00:00+00:00" />
+<meta property="article:modified_time" content="2015-01-26T00:00:00+00:00" />
+
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://1980204066.github.io.git"><img class="app-header-avatar" src="/avatar.jpg" alt="John Doe" /></a>
+      <h1>不动闲心 の blog</h1>
+      <nav class="app-header-menu">
+          <a class="app-header-menu-item" href="/tags/">Tags</a>
+      </nav>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vehicula turpis sit amet elit pretium.</p>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">C&#43;&#43;14的returntypededuction&amp;</h1>
+      <div class="post-meta">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          Jan 26, 2015
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          1 min read
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tag">
+  <title>tag</title>
+  <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line>
+</svg>
+              <a class="tag" href="https://1980204066.github.io.git/tags/it/">it</a>
+        </div>
+      </div>
+    </header>
+    <div class="post-content">
+      <p><a href="https://www.newsmth.net/nForum/#!article/CPlusPlus/374960">https://www.newsmth.net/nForum/#!article/CPlusPlus/374960</a></p>
+<p>若干年前实现了一个 C++
+序列化库，以前一直纠结于一种优化无法（自动）实现： </p>
+<p>struct A { int a1, a2; }; </p>
+<p>struct B { int b1, b2; }; </p>
+<p>struct C { A ca; B cb; }; </p>
+<p>struct D { std::set d; }; </p>
+<p>DATA_IO_LOAD_SAVE_E(A, &amp;a1 &amp;a2) // 序列化 A 的 a1, a2 成员，下同 </p>
+<p>DATA_IO_LOAD_SAVE_E(B, &amp;b1 &amp;b2) </p>
+<p>DATA_IO_LOAD_SAVE_E(C, &amp;ca &amp;cb) </p>
+<p>DATA_IO_LOAD_SAVE_E(D, &amp;d)      // stl 容器也可以序列化 </p>
+<p>  </p>
+<p>如果使用 NativeDataInput/Output, 只能自动推断出 A, B 可以直接  </p>
+<p>memcpy，无法推断出 C 也可以 memcpy，当然，任何情况下 D 肯定都是 </p>
+<p>无法 memcpy 的 </p>
+<p>  </p>
+<p>现在有了 return type deduction, C memcpy 的问题就解决了 </p>
+<p>  </p>
+<p>参考链接： <a href="https://www.nfabo.cn/p/?p=65">https://www.nfabo.cn/p/?p=65</a> </p>
+<p>  </p>
+
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>

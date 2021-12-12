@@ -1,0 +1,688 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <title>Apk Dump 刷机 // 不动闲心 の blog</title>
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.89.4" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="John Doe" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="https://1980204066.github.io.git/css/main.min.4a7ec8660f9a44b08c4da97c5f2e31b1192df1d4d0322e65c0dbbc6ecb1b863f.css" />
+
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Apk Dump 刷机"/>
+<meta name="twitter:description" content="dump apk   首先得配好java环境， https://www.cnblogs.com/guxiaobei/p/8556586.html
+apt-get install default-jre apt-get install default-jdk #去Oracle官方网站下载并安装JDK https://www.oracle.com/technetwork/java/javase/downloads # JDK必须是1.7版本 [[https://www.52pojie.cn/thread-844248-1-1.html]] # 是的，如果用jdk11.0，androidkiller编译后安装不上。  配置环境变量   CLASSPATH -&gt; .;&#34;JAVA_HOME&#34;/lib/dt.jar;&#34;JAVA_HOME&#34;/lib/tools.jar （应该是 .;%JAVA_HOME%\lib;%JAVA_HOME%\lib→ols.jar ？） JAVA_HOME -&gt; C:Program Files\Java\jdk1.7.0_80 PATH -&gt; &#34;JAVA_HOME&#34;/bin;&#34;JAVA_HOME&#34;/lib/tools.jar;
+ https://www.cnblogs.com/echomyecho/p/3334617.html
+ &#34;classpath&#34;，设置java各个类的路径，&#34;.;%java_home%\lib;%java_home%\lib→ols.jar&#34;。前面的”.”不可少，它代表了我们为自己的java类建立的工作路径，其它的是jdk自带的标准类库路径。
+ CLASSPATH的设定，对JAVA的初学者而言是一件棘手的事。所以Sun让JAVA2的JDK更聪明一些。你会发现，在你安装之后，即使完全没有设定CLASSPATH，你仍然能够编译基本的JAVA程序，并且加以执行。
+ JAVA_HOME D:\java\jdk1.6.0_32 (JDK安装目录)
+ 双击系统变量中的Path选项, *C:Program Files\*Java\jdk1.8.0_131\bin
+ java -version   apk反编译与破解   https://www.cnblogs.com/JhonKing/p/5106141.html
+ java -jar apktool.jar d -f test.apk java -jar apktool_2.3.4.jar d 来电语音报号."/>
+
+    <meta property="og:title" content="Apk Dump 刷机" />
+<meta property="og:description" content="dump apk   首先得配好java环境， https://www.cnblogs.com/guxiaobei/p/8556586.html
+apt-get install default-jre apt-get install default-jdk #去Oracle官方网站下载并安装JDK https://www.oracle.com/technetwork/java/javase/downloads # JDK必须是1.7版本 [[https://www.52pojie.cn/thread-844248-1-1.html]] # 是的，如果用jdk11.0，androidkiller编译后安装不上。  配置环境变量   CLASSPATH -&gt; .;&#34;JAVA_HOME&#34;/lib/dt.jar;&#34;JAVA_HOME&#34;/lib/tools.jar （应该是 .;%JAVA_HOME%\lib;%JAVA_HOME%\lib→ols.jar ？） JAVA_HOME -&gt; C:Program Files\Java\jdk1.7.0_80 PATH -&gt; &#34;JAVA_HOME&#34;/bin;&#34;JAVA_HOME&#34;/lib/tools.jar;
+ https://www.cnblogs.com/echomyecho/p/3334617.html
+ &#34;classpath&#34;，设置java各个类的路径，&#34;.;%java_home%\lib;%java_home%\lib→ols.jar&#34;。前面的”.”不可少，它代表了我们为自己的java类建立的工作路径，其它的是jdk自带的标准类库路径。
+ CLASSPATH的设定，对JAVA的初学者而言是一件棘手的事。所以Sun让JAVA2的JDK更聪明一些。你会发现，在你安装之后，即使完全没有设定CLASSPATH，你仍然能够编译基本的JAVA程序，并且加以执行。
+ JAVA_HOME D:\java\jdk1.6.0_32 (JDK安装目录)
+ 双击系统变量中的Path选项, *C:Program Files\*Java\jdk1.8.0_131\bin
+ java -version   apk反编译与破解   https://www.cnblogs.com/JhonKing/p/5106141.html
+ java -jar apktool.jar d -f test.apk java -jar apktool_2.3.4.jar d 来电语音报号." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://1980204066.github.io.git/posts/2016-03-05-apk-dump-%E5%88%B7%E6%9C%BA/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2016-03-05T00:00:00+00:00" />
+<meta property="article:modified_time" content="2016-03-05T00:00:00+00:00" />
+
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://1980204066.github.io.git"><img class="app-header-avatar" src="/avatar.jpg" alt="John Doe" /></a>
+      <h1>不动闲心 の blog</h1>
+      <nav class="app-header-menu">
+          <a class="app-header-menu-item" href="/tags/">Tags</a>
+      </nav>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vehicula turpis sit amet elit pretium.</p>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">Apk Dump 刷机</h1>
+      <div class="post-meta">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          Mar 5, 2016
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          4 min read
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tag">
+  <title>tag</title>
+  <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line>
+</svg>
+              <a class="tag" href="https://1980204066.github.io.git/tags/it/">it</a>
+        </div>
+      </div>
+    </header>
+    <div class="post-content">
+      
+<div id="outline-container-headline-1" class="outline-2">
+<h2 id="headline-1">
+dump apk
+</h2>
+<div id="outline-text-headline-1" class="outline-text-2">
+<p>
+首先得配好java环境， <a href="https://www.cnblogs.com/guxiaobei/p/8556586.html">https://www.cnblogs.com/guxiaobei/p/8556586.html</a></p>
+<div class="src src-sh">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">  apt-get install default-jre
+
+  apt-get install default-jdk
+
+  <span style="color:#75715e">#去Oracle官方网站下载并安装JDK https://www.oracle.com/technetwork/java/javase/downloads</span>
+  <span style="color:#75715e"># JDK必须是1.7版本 [[https://www.52pojie.cn/thread-844248-1-1.html]]</span>
+  <span style="color:#75715e"># 是的，如果用jdk11.0，androidkiller编译后安装不上。</span></code></pre></div>
+</div>
+<div id="outline-container-headline-2" class="outline-3">
+<h3 id="headline-2">
+配置环境变量 
+</h3>
+<div id="outline-text-headline-2" class="outline-text-3">
+<p>
+  CLASSPATH -&gt; .;&#34;JAVA_HOME&#34;/lib/dt.jar;&#34;JAVA_HOME&#34;/lib/tools.jar
+  （应该是 .;%JAVA_HOME%\lib;%JAVA_HOME%\lib→ols.jar ？）
+  JAVA_HOME  -&gt;  C:Program Files\Java\jdk1.7.0_80
+  PATH -&gt; &#34;JAVA_HOME&#34;/bin;&#34;JAVA_HOME&#34;/lib/tools.jar;</p>
+<p>
+<a href="https://www.cnblogs.com/echomyecho/p/3334617.html">https://www.cnblogs.com/echomyecho/p/3334617.html</a></p>
+<p>
+  &#34;classpath&#34;，设置java各个类的路径，&#34;.;%java_home%\lib;%java_home%\lib→ols.jar&#34;。前面的”.”不可少，它代表了我们为自己的java类建立的工作路径，其它的是jdk自带的标准类库路径。</p>
+<p>
+  CLASSPATH的设定，对JAVA的初学者而言是一件棘手的事。所以Sun让JAVA2的JDK更聪明一些。你会发现，在你安装之后，即使完全没有设定CLASSPATH，你仍然能够编译基本的JAVA程序，并且加以执行。</p>
+<p>
+  JAVA_HOME  D:\java\jdk1.6.0_32 (JDK安装目录)</p>
+<p>
+  双击系统变量中的Path选项, *C:Program Files\*Java\jdk1.8.0_131\bin</p>
+<p>
+  java -version </p>
+</div>
+</div>
+<div id="outline-container-headline-3" class="outline-3">
+<h3 id="headline-3">
+<a href="https://www.cnblogs.com/JhonKing/p/5106141.html">apk反编译与破解</a>
+</h3>
+<div id="outline-text-headline-3" class="outline-text-3">
+<p>
+<a href="https://www.cnblogs.com/JhonKing/p/5106141.html">https://www.cnblogs.com/JhonKing/p/5106141.html</a></p>
+<blockquote>
+<p>java  -jar apktool.jar d  -f test.apk
+  java -jar apktool_2.3.4.jar d 来电语音报号.apk -o dump-apk</p>
+</blockquote>
+<p>
+  smali 就是java代码了类似于汇编</p>
+<p>
+  <strong>得到java源码</strong></p>
+<p>
+  自行解压原apk文件，得到其中的classes.dex 文件</p>
+<p>
+  使用dex2jar反编译apk得到Java源代码 <a href="https://blog.csdn.net/s13383754499/article/details/78914592">https://blog.csdn.net/s13383754499/article/details/78914592</a></p>
+<p>
+  E:\phone-刷机\dump-apk&gt;..\dex2jar-2.0\d2j-dex2jar.bat classes.dex</p>
+<p>
+  然后再用jd_gui工具打开这个jar文件就可以看到java源代码了 </p>
+<p>
+  jd_gui 要求 jre 1.7.0, 自动安装 jre 1.8.0_191</p>
+<p>
+  IDA Pro 7.0 绿色版 <a href="https://www.52pojie.cn/thread-675251-1-1.html">https://www.52pojie.cn/thread-675251-1-1.html</a></p>
+<p>
+  <a href="https://down.52pojie.cn/Tools/Disassemblers/IDA_Pro_v7.0_Portable.zip">IDA_Pro_v7.0_Portable</a> （Windows绿色版）</p>
+<p>
+  <a href="https://down.52pojie.cn/Tools/Disassemblers/IDA_Pro_v7.0_and_Hex-Rays_Decompiler_(ARMx64,ARM,x64,x86).zip">IDA_Pro_v7.0_and_Hex-Rays_Decompiler_(ARMx64,ARM,x64,x86).zip</a> （Windows原版）</p>
+<p>
+  还多包涵了SDK等文件，名字：ida_plugin.zip）</p>
+<p>
+  <a href="https://pan.baidu.com/s/1c3R6iZY#list/path=%2F%E5%90%BE%E7%88%B1%E7%A0%B4%E8%A7%A3%E8%AE%BA%E5%9D%9B%2FIDA%207.0&amp;parentPath=%2F%E5%90%BE%E7%88%B1%E7%A0%B4%E8%A7%A3%E8%AE%BA%E5%9D%9B">https://pan.baidu.com/s/1c3R6iZY#list/path=%2F%E5%90%BE%E7%88%B1%E7%A0%B4%E8%A7%A3%E8%AE%BA%E5%9D%9B%2FIDA%207.0&amp;parentPath=%2F%E5%90%BE%E7%88%B1%E7%A0%B4%E8%A7%A3%E8%AE%BA%E5%9D%9B</a></p>
+<p>
+  <a href="https://www.jianshu.com/p/350d32ef95de">使用IDA调试SO脱壳，环境准备及各步骤原理详解 (android_server的文件</a>) </p>
+<p>
+  adb shell am start -D -n
+  longbin.helloworld/longbin.helloworld.SplashActivit</p>
+</div>
+</div>
+<div id="outline-container-headline-4" class="outline-3">
+<h3 id="headline-4">
+xposed 脱壳
+</h3>
+<div id="outline-text-headline-4" class="outline-text-3">
+<p>
+  可以尝试 用xposed
+  脱壳, <a href="https://www.cnblogs.com/QUSIR/p/6912032.html">xposed各种机型安装方法</a>，<a href="https://www.cnblogs.com/QUSIR/p/6912032.html">https://www.cnblogs.com/QUSIR/p/6912032.html</a></p>
+<p>
+  但是 从0.6.8 VirtualXposed 不再支持 Android 5.0 以下的系统 <a href="https://vxposed.com/download.html"><a href="https://vxposed.com/download.html">https://vxposed.com/download.html</a></a>
+  可以创建一个android虚拟机？用虚拟机的话，arch必须是 x86.</p>
+<p>
+  一个xposed模块写法： <a href="https://www.jianshu.com/p/5cc402b67aaa">https://www.jianshu.com/p/5cc402b67aaa</a></p>
+<p>
+  记一次APP脱壳重打包过程 <a href="https://blog.csdn.net/weixin_41508948/article/details/84543381">https://blog.csdn.net/weixin_41508948/article/details/84543381</a> 做个虚拟机脱</p>
+<p>
+  Android APK脱壳–腾讯乐固、360加固一键脱壳 <a href="https://blog.csdn.net/weixin_41508948/article/details/84835582"><a href="https://blog.csdn.net/weixin_41508948/article/details/84835582">https://blog.csdn.net/weixin_41508948/article/details/84835582</a></a></p>
+</div>
+</div>
+<div id="outline-container-headline-5" class="outline-3">
+<h3 id="headline-5">
+脱壳工具FDex2
+</h3>
+<div id="outline-text-headline-5" class="outline-text-3">
+<p><a href="https://www.52pojie.cn/forum.php?mod=viewthread&amp;tid=812082">记一个福利播放器的脱壳和修复 </a></p>
+</div>
+</div>
+<div id="outline-container-headline-6" class="outline-3">
+<h3 id="headline-6">
+安装DumpDex
+</h3>
+<div id="outline-text-headline-6" class="outline-text-3">
+<p>
+  反编译之脱去乐固加固的壳 <a href="https://blog.csdn.net/fnhfire_7030/article/details/84395426">https://blog.csdn.net/fnhfire_7030/article/details/84395426</a></p>
+<p>
+  5分钟学会基于Xposed+DumpDex的apk快速脱壳方法 <a href="https://www.jianshu.com/p/9d988bdddb3d">https://www.jianshu.com/p/9d988bdddb3d</a> (安装DumpDex)</p>
+<p>
+  Android studio编译没有activity或没有default activity的应用 <a href="https://blog.csdn.net/anhenzhufeng/article/details/77561482">https://blog.csdn.net/anhenzhufeng/article/details/77561482</a></p>
+<p>
+  目录中不能包含中文。E:\phone-刷机\Apps\dumpDex-develop 是不行的。</p>
+<p>
+  &#34;No toolchains found in the NDK toolchains folder for ABI with prefix:
+  mips64el-linux-android&#34;错误 <a href="https://blog.csdn.net/vocanicy/article/details/83004626">https://blog.csdn.net/vocanicy/article/details/83004626</a></p>
+<p>
+  经过对新版NDK的研究，发现NDK的更新记录里有一段话</p>
+<p>
+  This version of the NDK is incompatible with the Android Gradle
+  plugin
+    version 3.0 or older. If you see an error like
+   `No toolchains found in the NDK toolchains folder for ABI with
+  prefix: mips64el-linux-android`,
+    update your project file to [use plugin version 3.1 or newer]. You
+  will also
+    need to upgrade to Android Studio 3.1 or newer.</p>
+<p>
+  也就是说新版本的NDK与3.0及以前旧版的Android Gradle plugin插件不兼容</p>
+<p>
+  其实解决方法很简单，就是修改build.gradle中的红字部分，改为3.1以上版本即可</p>
+<p>
+  dependencies {
+    classpath &#39;com.android.tools.build:gradle:*3.2.0*&#39;</p>
+<p>
+   // NOTE: Do not place your application dependencies here; they
+  belong
+   // in the individual module build.gradle files
+  }
+  找不到asm/types.h文件，同样，在CMakeLists.txt文件里加上一句话 <a href="https://blog.csdn.net/qq_37475168/article/details/80369527">https://blog.csdn.net/qq_37475168/article/details/80369527</a> </p>
+<p>
+  set(CMAKE_C_FLAGS
+  &#34;-isystem /Users/songzeceng/Library/Android/sdk/ndk-bundle/sysroot/usr/include/arm-linux-androideabi&#34;)</p>
+<p>
+  我 set(CMAKE_CXX_FLAGS &#34;$ENV{CXXFLAGS} -isystem
+  c:/Users/Lenovo/AppData/Local/Android/sdk/ndk-bundle/sysroot/usr/include/arm-linux-androideabi&#34;) 不过限制32位后，不要这个没问题。</p>
+<p>
+  编译64位时出错，限制ndk只编译32位。</p>
+<p>
+  把 ndk 放在 defaultConfig 里面,your module-level build.gradle file</p>
+<p>
+  defaultConfig {
+  …..
+  ndk {</p>
+<p>
+    abiFilters &#34;armeabi-v7a&#34;
+  }
+  …..
+  }</p>
+<p>
+  用x86编不过。</p>
+<p>
+  产生一个key文件 <a href="https://blog.csdn.net/cgt_cgt/article/details/78958384">Android通过命令行签名APK</a></p>
+<p>
+  keytool -genkey -alias dumpdex.keystore -keyalg RSA -validity 20000
+  -keystore dumpdex.keystore</p>
+<p>
+  keytool -importkeystore -srckeystore dumpdex.keystore -destkeystore
+  dumpdex.keystore -deststoretype pkcs12</p>
+<p>
+  实际上在Run Configeration
+  里直接配，填4项值： <a href="https://blog.csdn.net/u014005316/article/details/55802650">Gradle打包：Keystore
+  not found for signing config</a></p>
+<p>
+   //添加签名文件配置 app/build.gradle
+    signingConfigs {
+    mysigns {
+    keyAlias &#39;zjandroid&#39;
+    keyPassword &#39;123456&#39;
+    storeFile file(&#39;zhoujian.jks&#39;)
+    storePassword &#39;123456&#39;
+   }
+   }</p>
+<p>
+   路径错了！ storeFile
+  file(&#39;zhoujian.jks&#39;)要写成完整的路径 
+  最后输出 ./app/build/outputs/apk/debug/app-debug.apk</p>
+<p>
+Bugly干货分享】手把手教你逆向分析 Android
+程序 <a href="https://blog.csdn.net/Tencent_Bugly/article/details/51424209">https://blog.csdn.net/Tencent_Bugly/article/details/51424209</a> (签名)</p>
+<p>
+Android逆向之旅—破解某应用加密算法(动态调试so和hook
+so代码 <a href="https://www.52pojie.cn/thread-839971-1-1.html">https://www.52pojie.cn/thread-839971-1-1.html</a></p>
+</div>
+</div>
+<div id="outline-container-headline-7" class="outline-3">
+<h3 id="headline-7">
+逍遥安卓模拟器
+</h3>
+<div id="outline-text-headline-7" class="outline-text-3">
+<p>
+  逍遥安卓模拟器—Android7.1.2内核 测试版 <a href="https://www.xyaz.cn/thread-365141-1-1.html">https://www.xyaz.cn/thread-365141-1-1.html</a></p>
+<p>
+  这个安装有问题，完成不了。 从 <a href="https://www.memuplay.com/"><a href="https://www.memuplay.com/">https://www.memuplay.com/</a> 下载可以装，但是咋停止在核对信息上?</a></p>
+<p>
+  下载”<a href="https://app.mi.com/detail/214">终端模拟器</a>”</p>
+<p>
+  打开终端模拟器，键入”su”</p>
+<p>
+  键入”setenforce permissive”回车即可解决Google Play 一直显示核对信息</p>
+<p>
+  CPU要支持虚拟化技术 主板开启VT 关闭Hyper-V 显卡驱动正确 完整系统</p>
+<p>
+  <a href="https://blog.csdn.net/qq_15228737/article/details/81142905">ADB命令连接逍遥模拟器</a> 逍遥模拟器安装目录（MEmu文件夹下），如：D:Program
+  Files\Microvirt\MEmu  (其他adb目录也可以）。</p>
+<p>
+  .\adb connect 127.0.0.1:21503</p>
+<p>
+  .\adb devices</p>
+<p>
+  List of devices attached
+  127.0.0.1:21503 device</p>
+<p>
+  OK，连接成功</p>
+<p>
+  <a href="https://www.cnblogs.com/gis-flying/p/7146126.html">Android Studio
+  使用逍遥模拟器调试</a></p>
+<p>
+  主要是在逍遥模拟器安装目录 adb start-server</p>
+<p>
+  在msl里执行 adb connect 127.0.0.1:21503 也可以 </p>
+</div>
+</div>
+<div id="outline-container-headline-8" class="outline-3">
+<h3 id="headline-8">
+说ZJDROID脱壳
+</h3>
+<div id="outline-text-headline-8" class="outline-text-3">
+<p>
+  说ZJDROID脱壳 <a href="https://github.com/KB5201314/ZjDroid">凑齐了ZjDroid的源码</a> 
+  <a href="https://github.com/KB5201314/ZjDroid"><a href="https://github.com/KB5201314/ZjDroid/releases">https://github.com/KB5201314/ZjDroid/releases</a></a></p>
+<p>
+  第一次ZjDroid脱壳实战 <a href="https://blog.csdn.net/u010746456/article/details/80150250">https://blog.csdn.net/u010746456/article/details/80150250</a></p>
+<p>
+  一样的文章： <a href="https://www.52pojie.cn/thread-736682-1-1.html">https://www.52pojie.cn/thread-736682-1-1.html</a></p>
+<p>
+  <a href="https://www.cnblogs.com/goodhacker/p/3961045.html">ZjDroid工具介绍及脱壳详细示例</a></p>
+<p>
+  1#  adb logcat -s com.flyersoft.seekbooks  啥也看不出来。</p>
+<p>
+  pid 是用 2# ps 看到的。</p>
+<p>
+  1# adb logcat -s zjdroid-shell-com.flyersoft.seekbooks
+  <a href="https://www.cnblogs.com/goodhacker/p/3961045.html">可以看到！</a> <a href="https://www.cnblogs.com/goodhacker/p/3961045.html">pid = 11811</a></p>
+<p>
+  2# adb shell</p>
+<p>
+  2# am broadcast -a com.zjdroid.invoke –ei target 9757–es cmd
+  &#39;{action:dump_dexinfo}&#39;</p>
+<p>
+  2#am broadcast -a com.zjdroid.invoke –ei target 9757 –es cmd
+  &#39;{&#34;action&#34;:&#34;dump_dexfile&#34;,&#34;dexpath&#34;:&#34;/data/app/com.flyersoft.seekbooks/base.apk&#34;}&#39;*</p>
+<ul>
+<li>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-headline-9" class="outline-3">
+<h3 id="headline-9">
+Refer:
+</h3>
+<div id="outline-text-headline-9" class="outline-text-3">
+<p>
+  <a href="https://www.jianshu.com/p/cf30221e4768">安卓脱壳-虚拟机</a></p>
+<p>
+  <a href="https://www.jianshu.com/p/f583358afaf5">Android加壳脱壳</a> (动态调试对 linker 和 libdvm.so 下断点,脱壳脚本)</p>
+<p>
+  <a href="https://www.jianshu.com/p/b20ff2ea37f4">Android 各种脱壳工具使用</a></p>
+<p>
+  <a href="https://www.jianshu.com/p/8a4e5da08fcb">Android_APK 之使用IDA脱壳环境搭建</a></p>
+<p>
+  <a href="https://www.jianshu.com/p/5d701fd5bf92"> 记一次APP脱壳重打包过程</a></p>
+<p>
+  <a href="https://www.jianshu.com/p/1f977cfbd05f">Android安全の脱壳 drizzleDumper,没有用 xposed</a></p>
+<p>
+  <a href="https://www.jianshu.com/p/92f4a91b9fd2">通过逆向快速开发一个Android APP</a></p>
+<p>
+  <a href="https://www.jianshu.com/p/a1e545414705">Android逆向分析概述</a></p>
+<p>
+  <a href="https://www.jianshu.com/p/a869be38d7c0">金蝉脱壳-乐固2.8</a></p>
+<p>
+  <a href="https://bbs.pediy.com/thread-210275.htm">360加固成功脱壳</a> (dex2oat.zip)</p>
+<p>
+  <a href="https://blog.csdn.net/qq_32400847/article/details/77823623">乐固加固脱壳过程</a> 
+  com.tencent.StubShell.TxAppEntry是恶意APP的入口 clone: </p>
+<p>
+  <a href="https://www.fortinet.com/blog/threat-research/unmasking-android-malware-a-deep-dive-into-a-new-rootnik-variant-part-i.html?noTracking">Unmasking Android Malware</a> </p>
+<p>
+  <a href="https://www.mamicode.com/info-detail-2237108.html">乐固壳分析</a> </p>
+<p>
+linux下使用SP_Flash_tool刷机 <a href="https://blog.csdn.net/alvin08/article/details/52118396">https://blog.csdn.net/alvin08/article/details/52118396</a></p>
+<p>
+<a href="https://www.needrom.com/download/how-to-setup-sp-flash-tool-linux-mtk/">https://www.needrom.com/download/how-to-setup-sp-flash-tool-linux-mtk/</a></p>
+<p>
+ 来电语音报号.apk
+<a href="https://www.52pojie.cn/forum.php?mod=viewthread&amp;tid=346441">https://www.52pojie.cn/forum.php?mod=viewthread&amp;tid=346441</a></p>
+<p>
+<a href="https://pan.baidu.com/s/1gdKmRkB">https://pan.baidu.com/s/1gdKmRkB</a></p>
+<p>
+安装报告有毒，更改浏览器 页面。危害比较小。</p>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-headline-10" class="outline-2">
+<h2 id="headline-10">
+刷机
+</h2>
+<div id="outline-text-headline-10" class="outline-text-2">
+<div id="outline-container-headline-11" class="outline-3">
+<h3 id="headline-11">
+大神X7三个版本如何选择？
+</h3>
+<div id="outline-text-headline-11" class="outline-text-3">
+<p>
+答：大神X7移动4G、双4G和全网通4G版三个版本售价分别为1599元、1699元和1999元，如果预算有限又是移动4G用户当然是选择移动4G版，但我们更推荐购买双4G版，能支持移动和联通的3G/4G网络，更可以自由切换，如果你是电信用户或者追求更好性能就选择大神X7全网通版。</p>
+<p>
+大神X7三版本区别 <a href="https://www.pc841.com/shoujizhishi/40711.html">https://www.pc841.com/shoujizhishi/40711.html</a></p>
+<p>
+大神X7全网通版 CPU型号 2.3Ghz高通801四核</p>
+<p>
+酷派大神X7全网通版（8691-00） <a href="https://blog.csdn.net/xmdxcsj/article/details/47122807">https://blog.csdn.net/xmdxcsj/article/details/47122807</a></p>
+<p>
+酷派大神X7双4G 8690手机 固件版本：4.4.072.P1.150615.8690</p>
+<p>
+酷派大神X7双4G 8690手机 安卓版本：Android 4.4.2</p>
+<p>
+大神X7+双网通+官方精简卡刷包.zip: <a href="https://pan.baidu.com/s/1c2h67SW">https://pan.baidu.com/s/1c2h67SW</a></p>
+<p>
+ 酷派大神X7双网通版8690原厂CPB线刷救砖资料 版本4.4.060.P1.150323.8690
+<a href="https://www.yzmg.com/rom/show-htm-itemid-30388.html">https://www.yzmg.com/rom/show-htm-itemid-30388.html</a></p>
+<p>
+酷派升级助手<a href="https://www.cnroms.com/coolpad-download-assistant.html">https://www.cnroms.com/coolpad-download-assistant.html</a> 现在的酷派众多旗舰机型都是对Bootloader 加了锁，所以我们只能通过CDA 线刷</p>
+<p>
+Coolpad Download Assistant Setup: <a href="https://pan.baidu.com/s/1kUSrmv1">https://pan.baidu.com/s/1kUSrmv1</a></p>
+<p>
+派官方CPB格式刷机包解包与打包工具 <a href="https://www.jkmeng.cn/thread-26-1-1.html?_dsign=d104c87f">https://www.jkmeng.cn/thread-26-1-1.html?_dsign=d104c87f</a></p>
+<p>
+<a href="https://www.cnblogs.com/scue/p/3378626.html">酷派手机固件.cpb文件的分解程序
+</a></p>
+<p>
+cpb格式刷机包解包 <a href="https://www.miui.com/thread-2245446-1-1.html">https://www.miui.com/thread-2245446-1-1.html</a> 
+YGDP登录密码：369</p>
+<p>
+酷派_YGPB.zip <a href="https://pan.baidu.com/s/1pJuQCFx">https://pan.baidu.com/s/1pJuQCFx</a></p>
+<p>
+<a href="https://www.yzmg.com/news/show-15414.html">手把手教你改酷派官方ROM，酷派cpb格式刷机包 </a></p>
+<p>
+旧版本下载地址（和上面一样！）：<a href="https://pan.baidu.com/s/1pJuQCFx"><a href="https://pan.baidu.com/s/1pJuQCFx">https://pan.baidu.com/s/1pJuQCFx</a></a>
+新版本下载地址：  <a href="https://pan.baidu.com/s/1pK9Jo1P">https://pan.baidu.com/s/1pK9Jo1P</a></p>
+<p>
+综上可见 刷机包 中.p1 是双4G 双网通版， .p0 是移动版。</p>
+<p>
+ 酷派8690_T00(大神X7 移动4G版)</p>
+<p>
+酷派大神X7移动版怎么进入Recovery模式 <a href="https://ask.07swz.com/q/6457514.html">https://ask.07swz.com/q/6457514.html</a></p>
+<p>
+酷派大神X7卡刷刷机教程 <a href="https://www.liqucn.com/article/1020755.shtml">https://www.liqucn.com/article/1020755.shtml</a></p>
+<p>
+酷派大神X7移动版8690-T00原厂CPB线刷救砖资料 版本4.4.042.P0.150323.8690_T00
+ <a href="https://www.yzmg.com/rom/show-htm-itemid-30435.html">https://www.yzmg.com/rom/show-htm-itemid-30435.html</a></p>
+<p>
+4.4.070.P0.150703.8690_T00.CPB
+ <a href="https://www.sosuopan.com/file/47382401">https://www.sosuopan.com/file/47382401</a></p>
+<p>
+酷派 大神X7(移动4G) <a href="https://www.romjd.com/Device/coolpad-8690t00">https://www.romjd.com/Device/coolpad-8690t00</a></p>
+<p>
+酷派大神x7手机不断重启:</p>
+<p>
+<a href="https://tieba.baidu.com/p/5377125514?red_tag=3582011961">https://tieba.baidu.com/p/5377125514?red_tag=3582011961</a></p>
+<p>
+ 电池的问题，把电池拆开，里面有一个1206封装的可恢复保险丝的内阻偏大，导致开机电流被限制，无法正常启动。把那个可恢复保险丝直接短接或换一个新的，重新包好，上电立马可以开机了。</p>
+<p>
+ 酷派大神X7拆机图解 <a href="https://www.pc841.com/shoujizhishi/41384.html">https://www.pc841.com/shoujizhishi/41384.html</a></p>
+<p>
+B8000
+<a href="https://www.baidu.com/link?url=kQcgBmVPPaXzWyZCA9q6MGXJq9piHFYm75_l5EpoBb7alK0-sW3_xx8CE-NHYGtGmV7wmEkjOPLmXqxCSDLrs5Gq4ch7kfN1RPXUcadh7Lm&amp;wd=&amp;eqid=ef7d026c0007d500000000025c19e7e3">MTK工程模式简单写入IMEI</a></p>
+<p>
+MTK  adb
+进入工程模式 <a href="https://blog.csdn.net/johnyuan1988/article/details/17348425">https://blog.csdn.net/johnyuan1988/article/details/17348425</a></p>
+<div class="src src-shell">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">  adb shell am start -n com.mediatek.engineermode/.EngineerMode</code></pre></div>
+</div>
+<p>
+直接从手机工程模式就能写入 <a href="https://tieba.baidu.com/p/2954661929?red_tag=3220956147">https://tieba.baidu.com/p/2954661929?red_tag=3220956147</a></p>
+<p>
+ 将system image所在的分区(/dev/block/by-name/system)通过adb forward命令forward出来：<a href="https://blog.csdn.net/omnispace/article/details/80018705">超级好用的ADB FORWARD命令</a></p>
+<blockquote>
+<p>adb forward –remove-all
+  adb forward tcp:8424 dev:/dev/block/by-name/system</p>
+</blockquote>
+<p>
+将分区中的内容给读取出来:</p>
+<blockquote>
+<p>nc 127.0.0.1 8424 &gt; system.bin</p>
+</blockquote>
+<ul>
+<li>
+<p>EMUI3.0
+Android4.4.4以下完美ROOT教程 <a href="https://club.huawei.com/thread-3610674-1-1.html">https://club.huawei.com/thread-3610674-1-1.html</a></p>
+</li>
+<li>
+<p>手把手教大家自己制作中意的ROM卡刷包 <a href="https://cn.club.vmall.com/thread-3588025-1-1.html">https://cn.club.vmall.com/thread-3588025-1-1.html</a></p>
+</li>
+<li>
+<p>华为解锁刷机root教程详解 <a href="https://blog.csdn.net/lusongno1/article/details/52315827">https://blog.csdn.net/lusongno1/article/details/52315827</a></p>
+</li>
+</ul>
+<p>绕开华为通道，获取解锁码解锁BootLoader
+<a href="https://www.52pojie.cn/forum.php?mod=viewthread&amp;tid=816065">https://www.52pojie.cn/forum.php?mod=viewthread&amp;tid=816065</a></p>
+<p>
+获取华为解锁码的思路 <a href="https://blog.csdn.net/autohacker/article/details/50715639">https://blog.csdn.net/autohacker/article/details/50715639</a></p>
+<p>
+<a href="https://www.52pojie.cn/forum.php?mod=viewthread&amp;tid=787009"> Android BusyBox Pro v68</a></p>
+<ul>
+<li>
+<p><a href="https://www.miui.com/thread-3704773-1-1.html">Andorid Tools–强大的Apk反编译,Rom提取工具,从此告别枯燥的命令</a></p>
+</li>
+</ul>
+<p><a href="https://www.miui.com/thread-3704773-1-1.html">https://www.miui.com/thread-3704773-1-1.html</a></p>
+<p>
+需要一个root shell超级adbd  MTKdroidtool
+才能工作 ： <a href="https://www.muzisoft.com/shuaji/78774.html">MtkDroidTools提取线刷包使用教程 
+<a href="https://www.muzisoft.com/shuaji/78774.html">https://www.muzisoft.com/shuaji/78774.html</a></a></p>
+<p>
+还可以生成 TWRP recovery .</p>
+<p>
+ mt6571 高仿iphone6s: </p>
+<ul>
+<li>
+<p>TWRP官方APP发布下载</p>
+</li>
+</ul>
+<p><a href="https://pcedu.pconline.com.cn/969/9697486.html">https://pcedu.pconline.com.cn/969/9697486.html</a></p>
+<p>
+https://pcedu.pconline.com.cn/867/8678765.html</p>
+<p>
+通过应用宝 下载
+<a href="https://dl.pconline.com.cn/download/510878.html">Official TWRP App
+并安装
+</a></p>
+<ul>
+<li>
+<p><a href="https://dl.pconline.com.cn/download/510878.html">手动移植recovery工具</a></p>
+</li>
+</ul>
+<p><a href="https://dl.pconline.com.cn/download/510878.html"><a href="https://tieba.baidu.com/p/3537800828?red_tag=0759598611">https://tieba.baidu.com/p/3537800828?red_tag=0759598611</a>
+</a></p>
+<p>
+<a href="https://dl.pconline.com.cn/download/510878.html">
+</a></p>
+<ul>
+<li>
+<p>使用mount修改你的android中/system为只读权限</p>
+</li>
+</ul>
+<p><a href="https://blog.sina.com.cn/s/blog_5842daa30101eeke.html">https://blog.sina.com.cn/s/blog_5842daa30101eeke.html</a></p>
+<p>
+更改/system 权限。</p>
+<p>
+mount -wo remount rootfs /</p>
+<p>
+mount -o remount,ro /dev/block/mtdblock0/system </p>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-headline-12" class="outline-2">
+<h2 id="headline-12">
+img2simg
+</h2>
+<div id="outline-text-headline-12" class="outline-text-2">
+<p>
+<a href="https://github.com/dlenski/PySIMG">https://github.com/dlenski/PySIMG</a></p>
+<div class="src src-shell">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">  python setup.py install --record log
+  cat log ｜ xagrs rm －rf  
+  /usr/local/bin/img2simg system-raw.img -o system-new.img</code></pre></div>
+</div>
+<p>
+android 在线code <a href="https://www.androidos.net.cn/android/7.0.0_r31/xref/system/core/libsparse">https://www.androidos.net.cn/android/7.0.0_r31/xref/system/core/libsparse</a></p>
+<p>
+[Tool] SparseConverter v1.0.1 <a href="https://forum.xda-developers.com/showthread.php?t=2749797"><a href="https://...">https://...</a></a> <a href="https://github.com/dlenski/PySIMG]]">https://github.com/dlenski/PySIMG]]</a></p>
+<div class="src src-shell">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">  ./SparseConverter /decompress userdata.img u-raw.img
+  ./SparseConverter  /compress u-raw.img  ./  300MB</code></pre></div>
+</div>
+<p>
+<strong>Android ext4 system.img unpack repack</strong> <a href="https://blog.djodjo.org/?p=98">https://blog.djodjo.org/?p=98</a></p>
+<p>
+<a href="https://github.com/dlenski/PySIMG">自己</a>编译 make_ext4fs <a href="https://stackoverflow.com/questions/26589111/unpack-repack-android-img-with-ubuntu-simg2img-make-ext4fs">https://stackoverflow.com/questions/26589111/unpack-repack-android-img-with-ubuntu-simg2img-make-ext4fs</a></p>
+<ul>
+<li>
+<p>How to pack and unpack system.img and userdata.img from an Android factory image
+<a href="https://muzso.hu/2012/08/10/how-to-pack-and-unpack-system.img-and-userdata.img-from-an-android-factory-image">https://muzso.hu/2012/08/10/how-to-pack-and-unpack-system.img-and-userdata.img-from-an-android-factory-image</a></p>
+</li>
+</ul>
+<p>Unpack/repack ext4 Android system images
+<a href="https://www.xuebuyuan.com/2169973.html">https://www.xuebuyuan.com/2169973.html</a></p>
+<p>
+ext4_unpacker.zip
+<a href="https://pan.baidu.com/share/link?uk=2922523022&amp;shareid=2051109980">https://pan.baidu.com/share/link?uk=2922523022&amp;shareid=2051109980</a></p>
+<p>
+ <a href="https://www.cr173.com/soft/101123.html">https://www.cr173.com/soft/101123.html</a></p>
+<div class="src src-shell">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">  sudo apt-get install git zlib1g-dev gcc make libpcre3-dev
+  
+  URL<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://android.googlesource.com/platform/system/core&#34;</span>
+  git clone --depth <span style="color:#ae81ff">1</span> <span style="color:#e6db74">&#34;</span>$URL<span style="color:#e6db74">&#34;</span> <span style="color:#e6db74">&#34;</span><span style="color:#66d9ef">$(</span>basename $URL<span style="color:#66d9ef">)</span><span style="color:#e6db74">&#34;</span>
+  URL<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://android.googlesource.com/platform/system/extras&#34;</span>
+  git clone --depth <span style="color:#ae81ff">1</span> <span style="color:#e6db74">&#34;</span>$URL<span style="color:#e6db74">&#34;</span> <span style="color:#e6db74">&#34;</span><span style="color:#66d9ef">$(</span>basename $URL<span style="color:#66d9ef">)</span><span style="color:#e6db74">&#34;</span>
+  URL<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://android.googlesource.com/platform/external/libselinux&#34;</span>
+  git clone --depth <span style="color:#ae81ff">1</span> <span style="color:#e6db74">&#34;</span>$URL<span style="color:#e6db74">&#34;</span> <span style="color:#e6db74">&#34;</span><span style="color:#66d9ef">$(</span>basename $URL<span style="color:#66d9ef">)</span><span style="color:#e6db74">&#34;</span>
+  git clone <span style="color:#e6db74">&#34;extras&#34;</span> <span style="color:#e6db74">&#34;extras-build&#34;</span>
+  cd <span style="color:#e6db74">&#34;extras-build/ext4_utils&#34;</span>
+  
+  gcc  -Wall <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>   -o make_ext4fs <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>   -I$DIR/core/include -DANDROID <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>   -DHAVE_ANDROID_OS -DHOST <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>   -I$DIR/core/libsparse/include <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>   -I$DIR/libselinux/include <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    make_ext4fs_main.c <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    make_ext4fs.c <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    ext4fixup.c <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    ext4_utils.c <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    allocate.c <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    contents.c <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    extent.c <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    indirect.c <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    uuid.c <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    sha1.c <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    wipe.c <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    crc16.c <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    ext4_sb.c <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>   $DIR/core/libsparse/backed_block.c <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>   $DIR/core/libsparse/output_file.c <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>   $DIR/core/libsparse/sparse.c <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>   $DIR/core/libsparse/sparse_crc32.c <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>   $DIR/core/libsparse/sparse_err.c <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>   $DIR/core/libsparse/sparse_read.c <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>   $DIR/libselinux/src/callbacks.c <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>   $DIR/libselinux/src/check_context.c <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>   $DIR/libselinux/src/freecon.c <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>   $DIR/libselinux/src/init.c <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>   $DIR/libselinux/src/label.c <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>   $DIR/libselinux/src/label_android_property.c <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>   $DIR/libselinux/src/label_file.c<span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>   -lz <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>   -lpcre</code></pre></div>
+</div>
+</div>
+</div>
+<div id="outline-container-headline-13" class="outline-2">
+<h2 id="headline-13">
+elf-修复
+</h2>
+<div id="outline-text-headline-13" class="outline-text-2">
+<p><a href="https://bbs.pediy.com/thread-194053.htm"> 从零打造简单的SODUMP工具</a></p>
+<p>
+<a href="https://bbs.pediy.com/thread-192874.htm">ELF section修复的一些思考</a></p>
+<p>
+<a href="https://blog.csdn.net/happyguys12345/article/details/71170080">ARM平台下elf文件超详细的分析与解读</a></p>
+<p>
+<a href="https://blog.csdn.net/t396602425/article/details/70877361">简单SO加密及ELF头文件</a>   工具
+010Editor, ELF Template. 360crackme.rar
+<a href="https://bbs.pediy.com/thread-188793.htm">360无线攻防第三题详细分析</a>  </p>
+<p>
+<a href="https://www.219.me/posts/2855.html">010Editor Template 下载地址集合 </a></p>
+<p>
+<a href="https://blog.csdn.net/kibaamor/article/details/11213823">一个简单的elf文件头查看工具</a></p>
+<p>
+<a href="https://blog.csdn.net/helloworld_ptt/article/details/79575783">Windows下的ELF文件解析代码C++</a></p>
+</div>
+</div>
+
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>

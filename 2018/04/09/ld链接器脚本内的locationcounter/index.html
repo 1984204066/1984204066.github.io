@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <title>ld链接器脚本内的locationcounter // 不动闲心 の blog</title>
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.89.4" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="John Doe" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="https://1980204066.github.io.git/css/main.min.4a7ec8660f9a44b08c4da97c5f2e31b1192df1d4d0322e65c0dbbc6ecb1b863f.css" />
+
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="ld链接器脚本内的locationcounter"/>
+<meta name="twitter:description" content="https://www.newsmth.net/nForum/#!article/KernelTech/74604
+. 是指 memory layout，表示当前偏移量。
+对于reloadeble， 。 代表了相邻的session和当前位置的偏移。0-offset
+https://forum.osdev.org/viewtopic.php?f=1&amp;t=32840
+ . = 0x1111111; /* We are still in the previous section right now. Although if orphan sections are not discarded, we would be in one of those orphan sections instead. */ R_in_same_section = .; /* Relative address in another section by itself is still a relative address in that section, no matter where we use it. */ S_in_first_section = E_inside_current; /DISCARD/ : { *(*); }"/>
+
+    <meta property="og:title" content="ld链接器脚本内的locationcounter" />
+<meta property="og:description" content="https://www.newsmth.net/nForum/#!article/KernelTech/74604
+. 是指 memory layout，表示当前偏移量。
+对于reloadeble， 。 代表了相邻的session和当前位置的偏移。0-offset
+https://forum.osdev.org/viewtopic.php?f=1&amp;t=32840
+ . = 0x1111111; /* We are still in the previous section right now. Although if orphan sections are not discarded, we would be in one of those orphan sections instead. */ R_in_same_section = .; /* Relative address in another section by itself is still a relative address in that section, no matter where we use it. */ S_in_first_section = E_inside_current; /DISCARD/ : { *(*); }" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://1980204066.github.io.git/2018/04/09/ld%E9%93%BE%E6%8E%A5%E5%99%A8%E8%84%9A%E6%9C%AC%E5%86%85%E7%9A%84locationcounter/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2018-04-09T00:00:00+00:00" />
+<meta property="article:modified_time" content="2018-04-09T00:00:00+00:00" />
+
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://1980204066.github.io.git"><img class="app-header-avatar" src="/avatar.jpg" alt="John Doe" /></a>
+      <h1>不动闲心 の blog</h1>
+      <nav class="app-header-menu">
+          <a class="app-header-menu-item" href="/tags/">Tags</a>
+      </nav>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vehicula turpis sit amet elit pretium.</p>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">ld链接器脚本内的locationcounter</h1>
+      <div class="post-meta">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          Apr 9, 2018
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          1 min read
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tag">
+  <title>tag</title>
+  <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line>
+</svg>
+              <a class="tag" href="https://1980204066.github.io.git/tags/it/">it</a>
+        </div>
+      </div>
+    </header>
+    <div class="post-content">
+      <p><a href="https://www.newsmth.net/nForum/#!article/KernelTech/74604">https://www.newsmth.net/nForum/#!article/KernelTech/74604</a></p>
+<p>. 是指 memory layout，表示当前偏移量。</p>
+<p>对于reloadeble， 。 代表了相邻的session和当前位置的偏移。0-offset</p>
+<p><a href="https://forum.osdev.org/viewtopic.php?f=1&amp;t=32840">https://forum.osdev.org/viewtopic.php?f=1&amp;t=32840</a></p>
+<p>        . = 0x1111111;
+        /* We are still in the previous section right now.
+           Although if orphan sections are not discarded,
+           we would be in one of those orphan sections instead. */
+        R_in_same_section = .;
+        /* Relative address in another section by itself is still
+           a relative address in that section, no matter where we use
+it. */
+        S_in_first_section = E_inside_current;
+        /DISCARD/ : { *(*); }</p>
+<p>The results for relocatable output.</p>
+<p>0000000000000011        2       R_in_same_section
+0000000000000011        1       S_in_first_section</p>
+<p>按照作者的解释  R_in_same_section是在 another_section，偏移量. =
+0x1111100;</p>
+<p>后来又赋值  . = 0x1111111;， 所以R_in_same_section记录相对偏移量 = </p>
+<p>0x1111111 - 0x1111100 = 0x0000011</p>
+<p>.section .text </p>
+<p>         .globl _start</p>
+<p>_start: </p>
+<p>         movq $1, %rax </p>
+<p>         movq $0, %rbx </p>
+<p>         int$0x80</p>
+<p> ------test.lds------ </p>
+<p>SECTIONS</p>
+<p> { </p>
+<p>         . = 0x10; </p>
+<p>         label_1 = .; </p>
+<p>         custom_section : { </p>
+<p>                 . = 0x20; </p>
+<p>                 label_2 = . ; </p>
+<p>                 label_3 = ABSOLUTE(.) ; </p>
+<p>                  label_4 =  label_2 * 2；</p>
+<p>                 *(.text) ; </p>
+<p>         } </p>
+<p> }</p>
+<p>gcc -c test.s</p>
+<p>ld test.o -T test.lds -o test</p>
+<p>readelf -s test 和 nm test 输出类似。</p>
+<p>label_2 =0x30,  (0x20+0x10)</p>
+<p>label_4=0x50,   (0x20*2 +0x10)</p>
+<p>可见ld之后test中 label_2, label_4从relative offset转变成了virtual
+address。</p>
+
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>
